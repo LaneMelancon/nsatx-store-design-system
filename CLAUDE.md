@@ -3,6 +3,8 @@
 **Maintained By:** Lane Melancon — Onn Grid, LLC
 **Client:** Dr. Brandon Crawford — NeuroSolution Center of Austin
 **Last Updated:** 2026-06-29
+**GitHub Repo:** `https://github.com/LaneMelancon/nsatx-store-design-system`
+**Live Preview:** `https://lanemelancon.github.io/nsatx-store-design-system/`
 
 ---
 
@@ -533,5 +535,6 @@ Common icons: search, shopping-cart, heart, package, circle-check, info, triangl
 
 | Date       | Changes |
 | ---------- | ------- |
+| 2026-06-29 | Migrated to standalone GitHub repo (`nsatx-store-design-system`). Added GitHub Actions deploy workflow. Design system live at `https://lanemelancon.github.io/nsatx-store-design-system/`. Repo connected as submodule of `nsatx-store`. |
 | 2026-06-18 | Updated BASE_DESIGN.md to reflect v2 architecture. Added system colors (info=blue, warning=amber, error=red). Added 17 new component docs. Updated button rules (weight 500, primary vs brand context). Updated green-900 to #101913, green-800 to #0D4A21. Added directory structure, spacing, transitions, z-index documentation. |
 | 2026-06-17 | Multi-file architecture (tokens, base, components, layout CSS). 8 page demos created. Fonts via jsDelivr CDN. System color palette added. Alerts with blue info + amber warning. Toasts redesigned as solid inline. Button weight changed to 500. |
