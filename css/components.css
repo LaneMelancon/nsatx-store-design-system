@@ -3,7 +3,7 @@
 /* Requires: tokens.css, base.css loaded first                   */
 /* ══════════════════════════════════════════════════════════════ */
 
-/* ─────────────────────────────────────────────────────────────  */
+/* ───────────────────────────────────────────────────────────── */
 /* BUTTONS                                                       */
 /* Architecture: .btn base reads --btn-* vars.                   */
 /* Modifier classes set only the vars that differ.               */
@@ -12,7 +12,7 @@
 /*   • Malachite (.btn--brand) on dark/green-900 backgrounds     */
 /*   • Primary green-700 (.btn--primary) on light backgrounds    */
 /*   • Button text always uses Objective Medium (500)            */
-/* ─────────────────────────────────────────────────────────────  */
+/* ───────────────────────────────────────────────────────────── */
 .btn {
   display: inline-flex;
   align-items: center;

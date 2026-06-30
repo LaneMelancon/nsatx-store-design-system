@@ -1,7 +1,7 @@
-/* ══════════════════════════════════════════════════════════════ */
-/* BASE — Reset, typography fundamentals, and body defaults      */
-/* Requires: tokens.css loaded first                             */
-/* ══════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════
+BASE – Reset, typography fundamentals, and body defaults
+Requires: tokens.css loaded first
+══════════════════════════════════════════════════════ */
 
 /* ─────────────────────────────── */
 /* RESET                           */
@@ -110,6 +110,7 @@ h5 {
   line-height: var(--leading-eyebrow);
   letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
+  margin-bottom: var(--space-2);
 }
 
 /* ─────────────────────────────── */
