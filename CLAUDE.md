@@ -1,10 +1,6 @@
 # NeuroSolution ATX Supplement Store — Design System
 
-**Maintained By:** Lane Melancon — Onn Grid, LLC
-**Client:** Dr. Brandon Crawford — NeuroSolution Center of Austin
-**Last Updated:** 2026-07-15
-**GitHub Repo:** `https://github.com/LaneMelancon/nsatx-store-design-system`
-**Live Preview:** `https://lanemelancon.github.io/nsatx-store-design-system/`
+**Maintained By:** Lane Melancon — Onn Grid, LLC **Client:** Dr. Brandon Crawford — NeuroSolution Center of Austin **Last Updated:** 2026-07-15 **GitHub Repo:** `https://github.com/LaneMelancon/nsatx-store-design-system` **Live Preview:** `https://lanemelancon.github.io/nsatx-store-design-system/`
 
 ---
 
@@ -16,11 +12,11 @@
 
 ## Directory Structure
 
-The project is split into a **portable core** (tokens, base, components, layout — safe to port directly into the Shopify theme) and **documentation-only chrome** (`playground.css`, the sidebar shell, section scaffolding) that must never leak into the portable core. `patterns.css` sits in between: composed, page-section-level patterns (hero, product grid, CTA band, etc.) built from the core tokens/components — the closest preview of actual Shopify section templates.
+The project is split into a **portable core** (`tokens.css`, `base.css` — safe to port directly into the Shopify theme) and **documentation-only chrome** (`layout.css`, `components/`, `playground.css`, the sidebar shell, section scaffolding) that must never leak into the portable core. `patterns.css` sits in between: composed, page-section-level patterns (hero, product grid, CTA band, etc.) built from the core tokens/components — the closest preview of actual Shopify section templates.
 
 ```
 design-system/
-├── CLAUDE.md               # This file — high-level overview
+├── CLAUDE.md               # (this file) – High-level overview
 ├── DESIGN.md               # Full design system reference (tokens, type, components)
 ├── index.html              # Landing page: philosophy + nav-out to the 3 docs pages
 ├── foundations.html        # Colors, typography, spacing, accessibility docs
@@ -29,10 +25,10 @@ design-system/
 ├── css/
 │   ├── tokens.css          # PORTABLE — design tokens (colors, type, spacing, elevation)
 │   ├── base.css            # PORTABLE — reset + typography fundamentals
-│   ├── layout.css          # PORTABLE — container/grid/flex utility primitives only
-│   ├── components/         # PORTABLE — one file per component (buttons.css, cards.css, alerts.css, …)
-│   ├── patterns.css        # PORTABLE-ish — composed storefront section patterns
-│   └── playground.css      # DOCS ONLY — sidebar shell, pg-section/pg-scene scaffolding,
+│   ├── layout.css          # DOC-ONLY – container/grid/flex utility primitives only
+│   ├── components/         # DOC-ONLY – one file per component (buttons.css, cards.css, alerts.css, …)
+│   ├── patterns.css        # composed storefront section patterns
+│   └── playground.css      # DOC-ONLY – sidebar shell, pg-section/pg-scene scaffolding,
 │                            #   color swatches, type specimens — never port this file
 └── pages/
     ├── homepage.html       # Landing page demo
@@ -45,7 +41,7 @@ design-system/
     └── account.html         # Account dashboard demo
 ```
 
-Every HTML page (index/foundations/components/patterns/pages/*) links `css/components/*.css` individually — no bundler, no `@import` — matching how Shopify's `theme.liquid` loads many small assets. `pages/*.html` do **not** load `playground.css`; they're meant to look like real storefront pages, not documentation chrome.
+Every HTML page (index/foundations/components/patterns/pages/_) links `css/components/_.css`individually — no bundler, no`@import`— matching how Shopify's`theme.liquid`loads many small assets.`pages/\*.html`do **not** load`playground.css`; they're meant to look like real storefront pages, not documentation chrome.
 
 ---
 
@@ -59,8 +55,8 @@ Every HTML page (index/foundations/components/patterns/pages/*) links `css/compo
 
 ## Changelog
 
-| Date       | Changes |
-| ---------- | ------- |
+| Date | Changes |
+| --- | --- |
 | 2026-07-15 | Split design specs out of `CLAUDE.md` into a dedicated `DESIGN.md`, rewritten to match the current `tokens.css` primitive/alias/dark-theme-override architecture (`--color-*` primitives; `--system-*`/`--brand-*`/`--surface-*`/`--text-*`/`--icon-*`/`--border-*` aliases; `[data-theme='dark']` overrides). `CLAUDE.md` now holds only directory structure and high-level pointers. |
 | 2026-07-14 | Migrated `tokens.css` to the v2 alias architecture (semantic `--brand-*`/`--surface-*`/`--text-*`/`--icon-*`/`--border-*` tokens with `[data-theme='dark']` overrides); removed `tokens-v1.css`-era references from every CSS and HTML file. Split `components.css` into `css/components/*.css` (one file per component, linked individually — no bundler/`@import`). Split `layout.css` into true reusable primitives (containers/grid/flex) plus a new `playground.css` (documentation-only chrome) and `patterns.css` (reusable storefront section patterns: hero, product grid, features, testimonial, CTA band, newsletter, trust bar). Split `index.html` into `index.html` (landing), `foundations.html`, `components.html`, and `patterns.html`. Fixed the `.btn` base rule not consuming its own `--btn-*` modifier variables, collapsed the `.alert--*-dark` modifier classes in favor of `[data-theme='dark']`, and rebuilt the section-pattern demos to use real classes instead of inline styles. |
 | 2026-06-29 | Migrated to standalone GitHub repo (`nsatx-store-design-system`). Added GitHub Actions deploy workflow. Design system live at `https://lanemelancon.github.io/nsatx-store-design-system/`. Repo connected as submodule of `nsatx-store`. |
