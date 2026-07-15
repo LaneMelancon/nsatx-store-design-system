@@ -12,7 +12,7 @@
 
 ## Directory Structure
 
-The project is split into a **portable core** (`tokens.css`, `base.css` — safe to port directly into the Shopify theme) and **documentation-only chrome** (`layout.css`, `components/`, `playground.css`, the sidebar shell, section scaffolding) that must never leak into the portable core. `patterns.css` sits in between: composed, page-section-level patterns (hero, product grid, CTA band, etc.) built from the core tokens/components — the closest preview of actual Shopify section templates.
+The project is split into a **portable core** (`tokens.css` and potentially `base.css` — safe to port directly into the Shopify theme) and **documentation-only chrome** (`layout.css`, `components/`, `playground.css`, the sidebar shell, section scaffolding) that must never leak into the portable core. `patterns.css` sits in between: composed, page-section-level patterns (hero, product grid, CTA band, etc.) built from the core tokens/components — the closest preview of actual Shopify section templates.
 
 ```
 design-system/
@@ -24,7 +24,7 @@ design-system/
 ├── patterns.html           # Storefront section pattern demos
 ├── css/
 │   ├── tokens.css          # PORTABLE — design tokens (colors, type, spacing, elevation)
-│   ├── base.css            # PORTABLE — reset + typography fundamentals
+│   ├── base.css            # PORTABLE (potentially) — reset + typography fundamentals
 │   ├── layout.css          # DOC-ONLY – container/grid/flex utility primitives only
 │   ├── components/         # DOC-ONLY – one file per component (buttons.css, cards.css, alerts.css, …)
 │   ├── patterns.css        # composed storefront section patterns
