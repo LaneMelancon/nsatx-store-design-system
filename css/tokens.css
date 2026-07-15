@@ -16,14 +16,13 @@ elevation values.
   /* --- Rules -------------------------------------------------------------- */
   /* Default – 'Objective' (Regular, 400).                                    */
   /* Buttons – 'Objective' in Medium weight (500).                            */
-  /* Secondary – 'Trade Gothic' is only used for Eyebrows, Navbar links       */
+  /* Secondary – 'Trade Gothic' is only used for Accents, Navbar links        */
   /* (Desktop) and footer link column headings(Desktop).                      */
   /* ──────────────────────────────────────────────────────────────────────── */
 
   --font-primary: 'Objective', 'Gill Sans', Arial, sans-serif;
   --font-secondary:
     'Trade Gothic LT', 'Gill Sans', 'Trebuchet MS', Arial, sans-serif;
-  --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
 
   /* ─────────────────────────────── */
   /* COLOR PRIMITIVES                */
@@ -212,27 +211,15 @@ elevation values.
   --border-error-default: var(--color-red-500);
   --border-error-subtle: var(--color-red-100);
 
-  /* ––– Surface / Elevation ––– */
-  --surface-lowest: var(--surface-brand-default);
-  --surface-low: var(--system-subtle);
-  --surface-high: var(--color-neutral-100);
-  --surface-highest: var(--color-neutral-200);
-  --surface-inverse: var(--color-neutral-900);
-  --surface-on-variant: var(--color-neutral-600);
-  --surface-outline: var(--color-neutral-300);
-  --surface-outline-variant: var(--border-brand-subtle);
-
   /* ─────────────────────────────── */
   /* TYPOGRAPHY                      */
   /* ─────────────────────────────── */
   --text-h1: 3.625rem;
-  --text-h1-mob: 2.5rem;
   --text-h2: 2.25rem;
-  --text-h2-mob: 2rem;
   --text-h3: 1.5rem;
   --text-h4: 1.125rem;
   --text-h5: 1rem;
-  --text-eyebrow: 0.75rem;
+  --text-accent: 0.75rem;
 
   --text-2xs: 0.625rem;
   --text-xs: 0.75rem;
@@ -242,13 +229,11 @@ elevation values.
   --text-lg: 1.25rem;
 
   --leading-h1: 1.1;
-  --leading-h1-mob: 1.1;
   --leading-h2: 1.15;
-  --leading-h2-mob: 1.15;
   --leading-h3: 1.25;
   --leading-h4: 1.3;
   --leading-h5: 1.4;
-  --leading-eyebrow: 1;
+  --leading-accent: 1;
 
   --leading-2xs: 1;
   --leading-xs: 1.1;
@@ -259,8 +244,7 @@ elevation values.
 
   --tracking-h1: -0.0625rem;
   --tracking-h2: -0.0625rem;
-  --tracking-h2-mob: -0.0625rem;
-  --tracking-eyebrow: 0.125rem;
+  --tracking-accent: 0.125rem;
 
   --font-light: 300;
   --font-normal: 400;
@@ -321,28 +305,28 @@ elevation values.
   --space-base: 0.25rem;
 
   /* –– Spacing Reset (0rem | 0px) –– */
-  --space-none: --space(0);
+  --space-none: 0rem;
 
   /* –– Micro Spacing ––– */
   /* -- 0.0625rem, 0.125rem, 0.187rem, 0.25rem | 1px, 2px, 3px, 4px -- */
-  --space-4xs: --space(0.25);
-  --space-3xs: --space(0.5);
-  --space-2xs: --space(0.75);
-  --space-xs: --space(1);
+  --space-4xs: calc(var(--space-base) * 0.25);
+  --space-3xs: calc(var(--space-base) * 0.5);
+  --space-2xs: calc(var(--space-base) * 0.75);
+  --space-xs: calc(var(--space-base) * 1);
 
   /* ––– Standard Spacing ––– */
   /* -- 0.5rem, 1rem, 1.5rem, 2rem | 8px, 16px, 24px, 32px -- */
-  --space-sm: --space(2);
-  --space-reg: --space(4);
-  --space-md: --space(6);
-  --space-lg: --space(8);
+  --space-sm: calc(var(--space-base) * 2);
+  --space-reg: calc(var(--space-base) * 4);
+  --space-md: calc(var(--space-base) * 6);
+  --space-lg: calc(var(--space-base) * 8);
 
   /* ––– Layout Spacing ––– */
-  /* -- 3rem, 4rem, 5.5rem, 6.5rem | 48px, 64px, 88px, 104px -- */
-  --space-xl: --space(12);
-  --space-2xl: --space(16);
-  --space-3xl: --space(22);
-  --space-4xl: --space(26);
+  /* -- 3rem, 4rem, 5rem, 6.25rem | 48px, 64px, 80px, 100px -- */
+  --space-xl: calc(var(--space-base) * 12);
+  --space-2xl: calc(var(--space-base) * 16);
+  --space-3xl: calc(var(--space-base) * 20);
+  --space-4xl: calc(var(--space-base) * 25);
 }
 
 /* ────────────────────────────────────── */
@@ -425,10 +409,4 @@ elevation values.
   --border-warning-subtle: var(--color-orange-800);
 
   --border-error-subtle: var(--color-red-800);
-
-  /* ––– Surface / Elevation ––– */
-  --surface-high: var(--color-neutral-800);
-  --surface-highest: var(--color-neutral-700);
-  --surface-on-variant: var(--color-neutral-400);
-  --surface-outline: var(--color-neutral-700);
 }

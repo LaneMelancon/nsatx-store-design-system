@@ -5,19 +5,19 @@
 /* ══════════════════════════════════════════════════════════════ */
 
 /* Objective */
-@font-face { font-family: 'Objective'; font-weight: 300; font-style: normal;  src: url('../assets/fonts/objective-300.woff2') format('woff2'); font-display: swap; }
-@font-face { font-family: 'Objective'; font-weight: 300; font-style: italic;  src: url('../assets/fonts/objective-300-italic.woff2') format('woff2'); font-display: swap; }
-@font-face { font-family: 'Objective'; font-weight: 400; font-style: normal;  src: url('../assets/fonts/objective-400.woff2') format('woff2'); font-display: swap; }
-@font-face { font-family: 'Objective'; font-weight: 400; font-style: italic;  src: url('../assets/fonts/objective-400-italic.woff2') format('woff2'); font-display: swap; }
-@font-face { font-family: 'Objective'; font-weight: 500; font-style: normal;  src: url('../assets/fonts/objective-500.woff2') format('woff2'); font-display: swap; }
-@font-face { font-family: 'Objective'; font-weight: 500; font-style: italic;  src: url('../assets/fonts/objective-500-italic.woff2') format('woff2'); font-display: swap; }
-@font-face { font-family: 'Objective'; font-weight: 700; font-style: normal;  src: url('../assets/fonts/objective-700.woff2') format('woff2'); font-display: swap; }
-@font-face { font-family: 'Objective'; font-weight: 700; font-style: italic;  src: url('../assets/fonts/objective-700-italic.woff2') format('woff2'); font-display: swap; }
-@font-face { font-family: 'Objective'; font-weight: 800; font-style: normal;  src: url('../assets/fonts/objective-800.woff2') format('woff2'); font-display: swap; }
-@font-face { font-family: 'Objective'; font-weight: 800; font-style: italic;  src: url('../assets/fonts/objective-800-italic.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Objective'; font-weight: 300; font-style: normal;  src: url('../fonts/objective-300.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Objective'; font-weight: 300; font-style: italic;  src: url('../fonts/objective-300-italic.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Objective'; font-weight: 400; font-style: normal;  src: url('../fonts/objective-400.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Objective'; font-weight: 400; font-style: italic;  src: url('../fonts/objective-400-italic.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Objective'; font-weight: 500; font-style: normal;  src: url('../fonts/objective-500.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Objective'; font-weight: 500; font-style: italic;  src: url('../fonts/objective-500-italic.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Objective'; font-weight: 700; font-style: normal;  src: url('../fonts/objective-700.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Objective'; font-weight: 700; font-style: italic;  src: url('../fonts/objective-700-italic.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Objective'; font-weight: 800; font-style: normal;  src: url('../fonts/objective-800.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Objective'; font-weight: 800; font-style: italic;  src: url('../fonts/objective-800-italic.woff2') format('woff2'); font-display: swap; }
 
 /* Trade Gothic LT */
-@font-face { font-family: 'Trade Gothic LT'; font-weight: 400; font-style: normal;  src: url('../assets/fonts/trade-gothic-lt-400.woff2') format('woff2'); font-display: swap; }
-@font-face { font-family: 'Trade Gothic LT'; font-weight: 400; font-style: italic;  src: url('../assets/fonts/trade-gothic-lt-400-italic.woff2') format('woff2'); font-display: swap; }
-@font-face { font-family: 'Trade Gothic LT'; font-weight: 700; font-style: normal;  src: url('../assets/fonts/trade-gothic-lt-700.woff2') format('woff2'); font-display: swap; }
-@font-face { font-family: 'Trade Gothic LT'; font-weight: 700; font-style: italic;  src: url('../assets/fonts/trade-gothic-lt-700-italic.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Trade Gothic LT'; font-weight: 400; font-style: normal;  src: url('../fonts/trade-gothic-lt-400.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Trade Gothic LT'; font-weight: 400; font-style: italic;  src: url('../fonts/trade-gothic-lt-400-italic.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Trade Gothic LT'; font-weight: 700; font-style: normal;  src: url('../fonts/trade-gothic-lt-700.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Trade Gothic LT'; font-weight: 700; font-style: italic;  src: url('../fonts/trade-gothic-lt-700-italic.woff2') format('woff2'); font-display: swap; }
