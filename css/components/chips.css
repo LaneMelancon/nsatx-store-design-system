@@ -1,0 +1,45 @@
+/* ══════════════════════════════════════════════════════════════ */
+/* CHIPS                                                           */
+/* Requires: tokens.css, base.css loaded first                   */
+/* ══════════════════════════════════════════════════════════════ */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+  padding: 0.5em 1em;
+  border-radius: var(--rounded-full);
+  border: 1px solid var(--surface-outline-variant);
+  background: var(--surface-low);
+  color: var(--surface-on-variant);
+  cursor: pointer;
+  transition:
+    background var(--duration-fast),
+    color var(--duration-fast),
+    border-color var(--duration-fast);
+  -webkit-border-radius: var(--rounded-full);
+  -moz-border-radius: var(--rounded-full);
+  -ms-border-radius: var(--rounded-full);
+  -o-border-radius: var(--rounded-full);
+}
+
+.chip:hover {
+  background: var(--color-green-050);
+  border-color: var(--color-green-100);
+  color: var(--color-green-800);
+}
+
+.chip.is-active {
+  background: var(--color-green-500);
+  border-color: transparent;
+  color: var(--color-green-900);
+}
+
+.chip svg {
+  width: 12px;
+  height: 12px;
+}
+

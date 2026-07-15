@@ -1,22 +1,41 @@
 /* ═══════════════════════════════════════════════════════════
 TOKENS — NeuroSolution Supplement Store
 Source of truth for all color, typography, spacing, and
-elevation values. Import this file first in every HTML page.
+elevation values.
 ══════════════════════════════════════════════════════════════ */
 
+/* Spacing function */
+@function --space(--multiplyer type(<number> | <percentage>): 1) returns
+  <length> {
+  result: calc(var(--space-base) * var(--multiplyer));
+}
+
 :root {
-  /* ─────────────────────────────── */
-  /* FONT STACKS                     */
-  /* ─────────────────────────────── */
+  /* ──────────────────────────────────────────────────────────────────────── */
+  /* FONT FAMILIES                                                            */
+  /* --- Rules -------------------------------------------------------------- */
+  /* Default – 'Objective' (Regular, 400).                                    */
+  /* Buttons – 'Objective' in Medium weight (500).                            */
+  /* Secondary – 'Trade Gothic' is only used for Eyebrows, Navbar links       */
+  /* (Desktop) and footer link column headings(Desktop).                      */
+  /* ──────────────────────────────────────────────────────────────────────── */
+
   --font-primary: 'Objective', 'Gill Sans', Arial, sans-serif;
   --font-secondary:
     'Trade Gothic LT', 'Gill Sans', 'Trebuchet MS', Arial, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
 
   /* ─────────────────────────────── */
-  /* BRAND COLORS — Green Scale      */
+  /* COLOR PRIMITIVES                */
   /* ─────────────────────────────── */
-  --color-green-900: #101913;
-  --color-green-800: #0d4a21;
+
+  /* ––– System ––– */
+  --color-white: #ffffff;
+  --color-black: #0e0e0e;
+
+  /* ––– Green ––– */
+  --color-green-900: #0e2415;
+  --color-green-800: #0d371b;
   --color-green-700: #0c8234;
   --color-green-600: #0cb144;
   --color-green-500: #0bda51;
@@ -24,178 +43,230 @@ elevation values. Import this file first in every HTML page.
   --color-green-300: #6de997;
   --color-green-200: #9df0b9;
   --color-green-100: #cef8dc;
-  --color-green-50: #e7fbee;
+  --color-green-050: #e7fbee;
+  --color-green-025: #f8fcf9;
+
+  /* ––– Blue ––– */
+  --color-blue-900: #131c2a;
+  --color-blue-800: #192b48;
+  --color-blue-700: #254882;
+  --color-blue-600: #3066bc;
+  --color-blue-500: #3b82f6;
+  --color-blue-400: #629bf8;
+  --color-blue-300: #89b4fa;
+  --color-blue-200: #b1cdfb;
+  --color-blue-100: #d8e6fd;
+  --color-blue-050: #ebf2fe;
+  --color-blue-025: #f5f8fe;
+
+  /* ––– Orange ––– */
+  --color-orange-900: #291f0d;
+  --color-orange-800: #47320d;
+  --color-orange-700: #82570d;
+  --color-orange-600: #bc7b0c;
+  --color-orange-500: #f59e0b;
+  --color-orange-400: #f7b13c;
+  --color-orange-300: #f9c56d;
+  --color-orange-200: #fbd89d;
+  --color-orange-100: #fdecce;
+  --color-orange-050: #fef5e6;
+  --color-orange-025: #fffcf0;
+
+  /* ––– Red ––– */
+  --color-red-900: #291414;
+  --color-red-800: #461b1b;
+  --color-red-700: #7f2929;
+  --color-red-600: #b73737;
+  --color-red-500: #ef4444;
+  --color-red-400: #f26969;
+  --color-red-300: #f58f8f;
+  --color-red-200: #f9b4b4;
+  --color-red-100: #fcdada;
+  --color-red-050: #fdecec;
+  --color-red-025: #fef5f5;
+
+  /* ––– Neutral ––– */
+  --color-neutral-950: #1a2f21;
+  --color-neutral-900: #273a2d;
+  --color-neutral-800: #3e5044;
+  --color-neutral-700: #57665c;
+  --color-neutral-600: #6e7c73;
+  --color-neutral-500: #86918a;
+  --color-neutral-400: #9fa7a2;
+  --color-neutral-300: #b6bdb8;
+  --color-neutral-200: #cfd3d0;
+  --color-neutral-100: #e6e9e7;
+  --color-neutral-050: #f3f4f3;
+  --color-neutral-025: #f9faf9;
 
   /* ─────────────────────────────── */
-  /* BRAND COLORS — Gray Scale       */
+  /* COLOR ALIASES                   */
   /* ─────────────────────────────── */
-  --color-gray-900: #131313;
-  --color-gray-800: #191919;
-  --color-gray-700: #303030;
-  --color-gray-600: #525252;
-  --color-gray-500: #747373;
-  --color-gray-400: #969595;
-  --color-gray-300: #b8b7b7;
-  --color-gray-200: #d9d8d8;
-  --color-gray-100: #f0efef;
-  --color-gray-50: #f9f9f9;
+
+  /* ––– System ––– */
+  --system-default: var(--color-black);
+  --system-default-hover: rgba(14, 14, 14, 0.15);
+  --system-alt: var(--color-white);
+  --system-subtle: rgba(14, 14, 14, 0.05);
+  --system-subtle-alt: rgba(14, 14, 14, 0.85);
+  --system-disabled: rgba(14, 14, 14, 0.65);
+
+  /* ––– Brand ––– */
+  --brand-default: var(--color-green-900);
+  --brand-alt: var(--color-white);
+  --brand-accent: var(--color-green-500);
+  --brand-accent-alt: var(--color-green-700);
+  --brand-primary: var(--color-green-700);
+  --brand-primary-alt: var(--color-green-200);
+  --brand-secondary: var(--color-orange-025);
+  --brand-secondary-alt: var(--color-green-025);
+  --brand-subtle: var(--color-green-050);
+  --brand-subtle-alt: var(--color-green-100);
+
+  /* ––– Surface ––– */
+  --surface-brand-default: var(--brand-alt);
+  --surface-brand-alt: var(--brand-default);
+  --surface-brand-secondary: var(--brand-secondary);
+  --surface-brand-subtle: var(--system-subtle);
+
+  /* -- Surface / Success -- */
+  --surface-success-default: var(--color-green-700);
+  --surface-success-default-hover: var(--color-green-200);
+  --surface-success-subtle: var(--color-green-050);
+
+  /* -- Surface / Info -- */
+  --surface-info-default: var(--color-blue-600);
+  --surface-info-default-hover: var(--color-blue-200);
+  --surface-info-subtle: var(--color-blue-050);
+
+  /* -- Surface / Warning -- */
+  --surface-warning-default: var(--color-orange-600);
+  --surface-warning-default-hover: var(--color-orange-200);
+  --surface-warning-subtle: var(--color-orange-050);
+
+  /* -- Surface / Error -- */
+  --surface-error-default: var(--color-red-600);
+  --surface-error-default-hover: var(--color-red-200);
+  --surface-error-subtle: var(--color-red-050);
+
+  /* ––– Text ––– */
+  --text-brand-default: var(--brand-default);
+  --text-brand-heading: var(--brand-default);
+  --text-brand-body: var(--color-neutral-800);
+  --text-brand-caption: var(--color-neutral-700);
+  --text-brand-accent: var(--brand-accent-alt);
+  --text-brand-alt: var(--brand-alt);
+
+  /* -- Text / Success -- */
+  --text-success-default: var(--color-green-700);
+  --text-success-subtle: var(--color-neutral-800);
+  --text-success-on-color: var(--color-green-025);
+  --text-success-on-color-hover: var(--color-green-700);
+
+  /* -- Text / Info -- */
+  --text-info-default: var(--color-blue-600);
+  --text-info-subtle: var(--color-blue-700);
+  --text-info-on-color: var(--color-blue-025);
+  --text-info-on-color-hover: var(--color-blue-700);
+
+  /* -- Text / Warning -- */
+  --text-warning-default: var(--color-orange-600);
+  --text-warning-subtle: var(--color-orange-700);
+  --text-warning-on-color: var(--color-orange-025);
+  --text-warning-on-color-hover: var(--color-orange-700);
+
+  /* -- Text / Error -- */
+  --text-error-default: var(--color-red-600);
+  --text-error-subtle: var(--color-red-700);
+  --text-error-on-color: var(--color-red-025);
+  --text-error-on-color-hover: var(--color-red-700);
+
+  /* ––– Icon ––– */
+  --icon-brand-default: var(--brand-default);
+  --icon-brand-accent: var(--brand-accent-alt);
+
+  /* -- Icon / Success, Info, Warning, Error -- */
+  --icon-success-default: var(--color-green-600);
+  --icon-info-default: var(--color-blue-500);
+  --icon-warning-default: var(--color-orange-500);
+  --icon-error-default: var(--color-red-500);
+
+  /* ––– Border ––– */
+  --border-brand-default: var(--brand-default);
+  --border-brand-subtle: var(--system-subtle);
+  --border-brand-accent: var(--brand-accent-alt);
+
+  /* -- Border / Success -- */
+  --border-success-default: var(--color-green-700);
+  --border-success-subtle: var(--color-green-100);
+
+  /* -- Border / Info -- */
+  --border-info-default: var(--color-blue-500);
+  --border-info-subtle: var(--color-blue-100);
+
+  /* -- Border / Warning -- */
+  --border-warning-default: var(--color-orange-500);
+  --border-warning-subtle: var(--color-orange-100);
+
+  /* -- Border / Error -- */
+  --border-error-default: var(--color-red-500);
+  --border-error-subtle: var(--color-red-100);
+
+  /* ––– Surface / Elevation ––– */
+  --surface-lowest: var(--surface-brand-default);
+  --surface-low: var(--system-subtle);
+  --surface-high: var(--color-neutral-100);
+  --surface-highest: var(--color-neutral-200);
+  --surface-inverse: var(--color-neutral-900);
+  --surface-on-variant: var(--color-neutral-600);
+  --surface-outline: var(--color-neutral-300);
+  --surface-outline-variant: var(--border-brand-subtle);
 
   /* ─────────────────────────────── */
-  /* BRAND COLORS — Named            */
+  /* TYPOGRAPHY                      */
   /* ─────────────────────────────── */
-  --color-white: #ffffff;
-  --color-black: var(--color-gray-900);
-  --color-malachite: var(--color-green-500);
-  --color-platinum: var(--color-gray-100);
+  --text-h1: 3.625rem;
+  --text-h1-mob: 2.5rem;
+  --text-h2: 2.25rem;
+  --text-h2-mob: 2rem;
+  --text-h3: 1.5rem;
+  --text-h4: 1.125rem;
+  --text-h5: 1rem;
+  --text-eyebrow: 0.75rem;
 
-  /* ─────────────────────────────── */
-  /* BRAND SEMANTIC ALIASES          */
-  /* ─────────────────────────────── */
-  --color-primary: var(--color-green-700);
-  --color-primary-container: var(--color-green-500);
-  --color-on-primary: var(--color-white);
-  --color-on-primary-container: var(--color-green-900);
+  --text-2xs: 0.625rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-reg: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
 
-  /* ─────────────────────────────── */
-  /* SYSTEM COLORS — Success         */
-  /* References brand green scale    */
-  /* ─────────────────────────────── */
-  --sys-success-50: var(--color-green-50);
-  --sys-success-100: var(--color-green-100);
-  --sys-success-200: var(--color-green-200);
-  --sys-success-400: var(--color-green-400);
-  --sys-success-500: var(--color-green-500);
-  --sys-success-700: var(--color-green-700);
-  --sys-success-800: var(--color-green-800);
-  --sys-success-900: var(--color-green-900);
-  --sys-success-bg: var(--color-green-50);
-  --sys-success-border: var(--color-green-100);
-  --sys-success-text: var(--color-green-900);
-  --sys-success-icon: var(--color-green-700);
-  --sys-success-bg-dark: rgba(11, 218, 81, 0.08);
-  --sys-success-border-dark: rgba(11, 218, 81, 0.15);
-  --sys-success-text-dark: var(--color-green-200);
-  --sys-success-icon-dark: var(--color-green-400);
+  --leading-h1: 1.1;
+  --leading-h1-mob: 1.1;
+  --leading-h2: 1.15;
+  --leading-h2-mob: 1.15;
+  --leading-h3: 1.25;
+  --leading-h4: 1.3;
+  --leading-h5: 1.4;
+  --leading-eyebrow: 1;
 
-  /* ─────────────────────────────── */
-  /* SYSTEM COLORS — Info (Blue)     */
-  /* ─────────────────────────────── */
-  --sys-info-50: #eff6ff;
-  --sys-info-100: #dbeafe;
-  --sys-info-200: #bfdbfe;
-  --sys-info-300: #93c5fd;
-  --sys-info-400: #60a5fa;
-  --sys-info-500: #3b82f6;
-  --sys-info-600: #2563eb;
-  --sys-info-700: #1d4ed8;
-  --sys-info-800: #1e3a5f;
-  --sys-info-900: #1e3a8a;
-  --sys-info-bg: #eff6ff;
-  --sys-info-border: #bfdbfe;
-  --sys-info-text: #1e3a5f;
-  --sys-info-icon: #2563eb;
-  --sys-info-bg-dark: rgba(37, 99, 235, 0.08);
-  --sys-info-border-dark: rgba(37, 99, 235, 0.15);
-  --sys-info-text-dark: #93c5fd;
-  --sys-info-icon-dark: #60a5fa;
+  --leading-2xs: 1;
+  --leading-xs: 1.1;
+  --leading-sm: 1.15;
+  --leading-reg: 1.5;
+  --leading-md: 1.55;
+  --leading-lg: 1.65;
 
-  /* ─────────────────────────────── */
-  /* SYSTEM COLORS — Warning (Amber) */
-  /* ─────────────────────────────── */
-  --sys-warning-50: #fffbeb;
-  --sys-warning-100: #fef3c7;
-  --sys-warning-200: #fde68a;
-  --sys-warning-300: #fcd34d;
-  --sys-warning-400: #fbbf24;
-  --sys-warning-500: #f59e0b;
-  --sys-warning-600: #d97706;
-  --sys-warning-700: #b45309;
-  --sys-warning-800: #92400e;
-  --sys-warning-900: #78350f;
-  --sys-warning-bg: #fffbeb;
-  --sys-warning-border: #fde68a;
-  --sys-warning-text: #78350f;
-  --sys-warning-icon: #d97706;
-  --sys-warning-bg-dark: rgba(217, 119, 6, 0.08);
-  --sys-warning-border-dark: rgba(217, 119, 6, 0.15);
-  --sys-warning-text-dark: #fde68a;
-  --sys-warning-icon-dark: #fbbf24;
+  --tracking-h1: -0.0625rem;
+  --tracking-h2: -0.0625rem;
+  --tracking-h2-mob: -0.0625rem;
+  --tracking-eyebrow: 0.125rem;
 
-  /* ─────────────────────────────── */
-  /* SYSTEM COLORS — Error (Red)     */
-  /* ─────────────────────────────── */
-  --sys-error-50: #fef2f2;
-  --sys-error-100: #fee2e2;
-  --sys-error-200: #fecaca;
-  --sys-error-300: #fca5a5;
-  --sys-error-400: #f87171;
-  --sys-error-500: #ef4444;
-  --sys-error-600: #dc2626;
-  --sys-error-700: #b91c1c;
-  --sys-error-800: #991b1b;
-  --sys-error-900: #7f1d1d;
-  --sys-error-bg: #ffdad6;
-  --sys-error-border: #fca5a5;
-  --sys-error-text: #7f1d1d;
-  --sys-error-icon: #ba1a1a;
-  --sys-error-bg-dark: rgba(186, 26, 26, 0.12);
-  --sys-error-border-dark: rgba(248, 113, 113, 0.2);
-  --sys-error-text-dark: #fca5a5;
-  --sys-error-icon-dark: #f87171;
-
-  /* Legacy alias */
-  --color-error: #ba1a1a;
-  --color-error-container: #ffdad6;
-  --color-on-error-container: #93000a;
-
-  /* ─────────────────────────────── */
-  /* SURFACE COLORS                  */
-  /* ─────────────────────────────── */
-  --surface-bg: #fcf9f8;
-  --surface-lowest: #ffffff;
-  --surface-low: #f6f3f2;
-  --surface-container: #f0edec;
-  --surface-high: #ebe7e7;
-  --surface-highest: #e5e2e1;
-  --surface-inverse: #313030;
-  --surface-on: var(--color-gray-900);
-  --surface-on-variant: var(--color-gray-600);
-  --surface-outline: var(--color-gray-300);
-  --surface-outline-variant: var(--color-gray-100);
-
-  /* ─────────────────────────────── */
-  /* TYPOGRAPHY SCALE                */
-  /* ─────────────────────────────── */
-  --text-h1: 60px;
-  --text-h1-mob: 40px;
-  --text-h2: 44px;
-  --text-h2-mob: 32px;
-  --text-h3: 24px;
-  --text-h4: 18px;
-  --text-h5: 16px;
-  --text-eyebrow: 14px;
-  --text-body-lg: 18px;
-  --text-body-reg: 16px;
-  --text-body-sm: 14px;
-  --text-body-tiny: 12px;
-
-  --leading-h1: 68px;
-  --leading-h1-mob: 48px;
-  --leading-h2: 54px;
-  --leading-h2-mob: 40px;
-  --leading-h3: 32px;
-  --leading-h4: 24px;
-  --leading-h5: 24px;
-  --leading-eyebrow: 14px;
-  --leading-body-lg: 28px;
-  --leading-body-reg: 24px;
-  --leading-body-sm: 21px;
-  --leading-body-tiny: 18px;
-
-  --tracking-h1: -1px;
-  --tracking-h2: -1px;
-  --tracking-h2-mob: -0.5px;
-  --tracking-eyebrow: 1px;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  --font-extrabold: 800;
 
   /* ─────────────────────────────── */
   /* BORDER RADIUS                   */
@@ -208,30 +279,18 @@ elevation values. Import this file first in every HTML page.
   --rounded-full: 50vw;
 
   /* ─────────────────────────────── */
-  /* SPACING SCALE                   */
-  /* ─────────────────────────────── */
-  --space-1: 0.25rem; /* 4px */
-  --space-2: 0.5rem; /* 8px */
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.25rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-10: 2.5rem;
-  --space-12: 3rem;
-  --space-16: 4rem;
-  --space-20: 5rem;
-  --space-24: 6rem;
-
-  /* ─────────────────────────────── */
   /* ELEVATION / SHADOWS             */
   /* ─────────────────────────────── */
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.04);
-  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.08), 0 8px 10px rgba(0, 0, 0, 0.04);
-  --shadow-toast: 0 4px 16px rgba(0, 0, 0, 0.14);
+  --shadow-xs: 0 1px 2px rgba(14, 36, 21, 0.04);
+  --shadow-sm:
+    0 1px 3px rgba(14, 36, 21, 0.06), 0 1px 2px rgba(14, 36, 21, 0.04);
+  --shadow-md:
+    0 4px 6px rgba(14, 36, 21, 0.05), 0 2px 4px rgba(14, 36, 21, 0.04);
+  --shadow-lg:
+    0 10px 16px rgba(14, 36, 21, 0.06), 0 4px 6px rgba(14, 36, 21, 0.04);
+  --shadow-xl:
+    0 20px 24px rgba(14, 36, 21, 0.08), 0 8px 10px rgba(14, 36, 21, 0.04);
+  --shadow-toast: 0 4px 16px rgba(14, 36, 21, 0.14);
 
   /* ─────────────────────────────── */
   /* TRANSITIONS                     */
@@ -253,4 +312,123 @@ elevation values. Import this file first in every HTML page.
   --z-modal: 50;
   --z-toast: 60;
   --z-tooltip: 70;
+
+  /* ─────────────────────────────── */
+  /* SPACING                         */
+  /* ─────────────────────────────── */
+
+  /* –– Base Spacing Increment (0.25rem | 4px) –– */
+  --space-base: 0.25rem;
+
+  /* –– Spacing Reset (0rem | 0px) –– */
+  --space-none: --space(0);
+
+  /* –– Micro Spacing ––– */
+  /* -- 0.0625rem, 0.125rem, 0.187rem, 0.25rem | 1px, 2px, 3px, 4px -- */
+  --space-4xs: --space(0.25);
+  --space-3xs: --space(0.5);
+  --space-2xs: --space(0.75);
+  --space-xs: --space(1);
+
+  /* ––– Standard Spacing ––– */
+  /* -- 0.5rem, 1rem, 1.5rem, 2rem | 8px, 16px, 24px, 32px -- */
+  --space-sm: --space(2);
+  --space-reg: --space(4);
+  --space-md: --space(6);
+  --space-lg: --space(8);
+
+  /* ––– Layout Spacing ––– */
+  /* -- 3rem, 4rem, 5.5rem, 6.5rem | 48px, 64px, 88px, 104px -- */
+  --space-xl: --space(12);
+  --space-2xl: --space(16);
+  --space-3xl: --space(22);
+  --space-4xl: --space(26);
+}
+
+/* ────────────────────────────────────── */
+/* COLOR ALIAS OVERRIDES (DARK THEME)     */
+/* ────────────────────────────────────── */
+[data-theme='dark'] {
+  /* ––– System ––– */
+  --system-default: var(--color-white);
+  --system-default-hover: rgba(255, 255, 255, 0.15);
+  --system-alt: var(--color-black);
+  --system-subtle: rgba(255, 255, 255, 0.05);
+  --system-subtle-alt: rgba(255, 255, 255, 0.85);
+  --system-disabled: rgba(255, 255, 255, 0.65);
+
+  /* ––– Brand ––– */
+  --brand-default: var(--color-orange-025);
+  --brand-alt: var(--color-green-900);
+  --brand-accent-alt: var(--color-green-400);
+  --brand-primary-alt: var(--color-green-800);
+  --brand-secondary: var(--color-green-900);
+  --brand-secondary-alt: var(--color-neutral-950);
+  --brand-subtle: var(--color-neutral-900);
+  --brand-subtle-alt: var(--color-neutral-800);
+
+  /* ––– Surface ––– */
+  /* -- Surface / Success --- */
+  --surface-success-default-hover: var(--color-green-800);
+  --surface-success-subtle: var(--color-green-900);
+
+  /* -- Surface / Info --- */
+  --surface-info-default-hover: var(--color-blue-800);
+  --surface-info-subtle: var(--color-blue-900);
+
+  /* -- Surface / Warning --- */
+  --surface-warning-default-hover: var(--color-orange-800);
+  --surface-warning-subtle: var(--color-orange-900);
+
+  /* -- Surface / Error --- */
+  --surface-error-default-hover: var(--color-red-800);
+  --surface-error-subtle: var(--color-red-900);
+
+  /* ––– Text ––– */
+  --text-brand-body: var(--color-neutral-200);
+  --text-brand-caption: var(--color-neutral-100);
+  --text-brand-accent: var(--brand-accent-alt);
+
+  /* -- Text / Success --- */
+  --text-success-default: var(--color-green-200);
+  --text-success-subtle: var(--color-green-100);
+  --text-success-on-color-hover: var(--color-green-400);
+
+  /* -- Text / Info --- */
+  --text-info-default: var(--color-blue-200);
+  --text-info-subtle: var(--color-blue-100);
+  --text-info-on-color-hover: var(--color-blue-400);
+
+  /* -- Text / Warning --- */
+  --text-warning-default: var(--color-orange-200);
+  --text-warning-subtle: var(--color-orange-100);
+  --text-warning-on-color-hover: var(--color-orange-400);
+
+  /* -- Text / Error --- */
+  --text-error-default: var(--color-red-200);
+  --text-error-subtle: var(--color-red-100);
+  --text-error-on-color-hover: var(--color-red-400);
+
+  /* ––– Icon ––– */
+  --icon-brand-accent: var(--brand-accent);
+
+  /* -- Icon / Success -- */
+  --icon-success-default: var(--color-green-500);
+
+  /* ––– Border ––– */
+  /* -- Border / Success, Info, Warning, Error -- */
+  --border-success-default: var(--color-green-400);
+  --border-success-subtle: var(--color-green-800);
+
+  --border-info-subtle: var(--color-blue-800);
+
+  --border-warning-subtle: var(--color-orange-800);
+
+  --border-error-subtle: var(--color-red-800);
+
+  /* ––– Surface / Elevation ––– */
+  --surface-high: var(--color-neutral-800);
+  --surface-highest: var(--color-neutral-700);
+  --surface-on-variant: var(--color-neutral-400);
+  --surface-outline: var(--color-neutral-700);
 }

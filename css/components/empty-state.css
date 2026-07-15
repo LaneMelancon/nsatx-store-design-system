@@ -1,0 +1,44 @@
+/* ══════════════════════════════════════════════════════════════ */
+/* EMPTY STATE                                                     */
+/* Requires: tokens.css, base.css loaded first                   */
+/* ══════════════════════════════════════════════════════════════ */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.empty-state-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--rounded-full);
+  background: var(--color-neutral-050);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empty-state-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--color-neutral-400);
+}
+
+.empty-state-title {
+  font-weight: 700;
+  font-size: var(--text-h4);
+  color: var(--color-neutral-900);
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+.empty-state-desc {
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-neutral-500);
+  max-width: 320px;
+  margin-bottom: 16px;
+}
+

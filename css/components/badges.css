@@ -1,0 +1,50 @@
+/* ══════════════════════════════════════════════════════════════ */
+/* BADGES                                                          */
+/* Requires: tokens.css, base.css loaded first                   */
+/* ══════════════════════════════════════════════════════════════ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 0.5em 1em 0.35em 1em;
+  border-radius: var(--rounded-full);
+  line-height: 1;
+}
+.badge svg {
+  width: 10px;
+  height: 10px;
+}
+
+.badge--success {
+  background: var(--color-green-100);
+  color: var(--color-green-800);
+}
+.badge--error {
+  background: var(--surface-error-subtle);
+  color: var(--text-error-subtle);
+}
+.badge--warning {
+  background: var(--color-orange-200);
+  color: var(--text-warning-subtle);
+}
+.badge--info {
+  background: var(--color-blue-200);
+  color: var(--text-info-subtle);
+}
+.badge--neutral {
+  background: var(--surface-high);
+  color: var(--color-neutral-600);
+}
+.badge--brand {
+  background: var(--color-green-900);
+  color: var(--color-green-400);
+}
+.badge--new {
+  background: var(--color-green-050);
+  color: var(--brand-primary);
+}
+

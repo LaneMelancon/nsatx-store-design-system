@@ -1,0 +1,33 @@
+/* ══════════════════════════════════════════════════════════════ */
+/* TABS                                                            */
+/* Requires: tokens.css, base.css loaded first                   */
+/* ══════════════════════════════════════════════════════════════ */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--surface-outline-variant);
+  gap: 0;
+}
+
+.tab {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  color: var(--color-neutral-500);
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition:
+    color var(--duration-fast),
+    border-color var(--duration-fast);
+  margin-bottom: -1px;
+}
+.tab:hover {
+  color: var(--color-neutral-900);
+}
+.tab.is-active {
+  color: var(--brand-primary);
+  border-bottom-color: var(--brand-primary);
+}
+

@@ -7,8 +7,35 @@
   <link rel="stylesheet" href="../css/fonts.css">
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components/accordion.css">
+  <link rel="stylesheet" href="../css/components/alerts.css">
+  <link rel="stylesheet" href="../css/components/avatar.css">
+  <link rel="stylesheet" href="../css/components/badges.css">
+  <link rel="stylesheet" href="../css/components/breadcrumbs.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/cards.css">
+  <link rel="stylesheet" href="../css/components/chips.css">
+  <link rel="stylesheet" href="../css/components/divider.css">
+  <link rel="stylesheet" href="../css/components/dropdown.css">
+  <link rel="stylesheet" href="../css/components/empty-state.css">
+  <link rel="stylesheet" href="../css/components/inputs.css">
+  <link rel="stylesheet" href="../css/components/modal.css">
+  <link rel="stylesheet" href="../css/components/navigation.css">
+  <link rel="stylesheet" href="../css/components/order-summary.css">
+  <link rel="stylesheet" href="../css/components/pagination.css">
+  <link rel="stylesheet" href="../css/components/progress.css">
+  <link rel="stylesheet" href="../css/components/quantity-selector.css">
+  <link rel="stylesheet" href="../css/components/search-bar.css">
+  <link rel="stylesheet" href="../css/components/skeleton.css">
+  <link rel="stylesheet" href="../css/components/steps.css">
+  <link rel="stylesheet" href="../css/components/table.css">
+  <link rel="stylesheet" href="../css/components/tabs.css">
+  <link rel="stylesheet" href="../css/components/tags.css">
+  <link rel="stylesheet" href="../css/components/toasts.css">
+  <link rel="stylesheet" href="../css/components/toggle.css">
+  <link rel="stylesheet" href="../css/components/tooltip.css">
+  <link rel="stylesheet" href="../css/patterns.css">
   <style>
     .checkout-layout {
       display: grid;
@@ -17,7 +44,7 @@
       padding: 48px 0;
     }
     .checkout-sidebar {
-      background: var(--color-gray-50);
+      background: var(--color-neutral-050);
       border: 1px solid var(--surface-outline-variant);
       border-radius: var(--rounded-lg);
       padding: 24px;
@@ -29,7 +56,7 @@
       font-family: var(--font-primary);
       font-weight: 700;
       font-size: var(--text-h4);
-      color: var(--color-gray-900);
+      color: var(--color-neutral-900);
       margin-bottom: 16px;
     }
     .form-section {
@@ -39,12 +66,12 @@
       font-family: var(--font-primary);
       font-weight: 700;
       font-size: var(--text-h3);
-      color: var(--color-gray-900);
+      color: var(--color-neutral-900);
       margin-bottom: 8px;
     }
     .form-section-desc {
-      font-size: var(--text-body-sm);
-      color: var(--color-gray-500);
+      font-size: var(--text-sm);
+      color: var(--color-neutral-500);
       margin-bottom: 20px;
     }
     .form-row {
@@ -60,12 +87,12 @@
       justify-content: space-between;
       align-items: center;
       padding: 8px 0;
-      font-size: var(--text-body-sm);
-      color: var(--color-gray-600);
+      font-size: var(--text-sm);
+      color: var(--color-neutral-600);
     }
     .summary-row span:last-child {
       font-weight: 500;
-      color: var(--color-gray-900);
+      color: var(--color-neutral-900);
     }
     .security-notice {
       display: flex;
@@ -73,10 +100,10 @@
       justify-content: center;
       gap: 8px;
       padding: 16px 0;
-      font-size: var(--text-body-sm);
-      color: var(--color-gray-500);
+      font-size: var(--text-sm);
+      color: var(--color-neutral-500);
     }
-    .security-notice svg { width: 14px; height: 14px; color: var(--color-gray-400); }
+    .security-notice svg { width: 14px; height: 14px; color: var(--color-neutral-400); }
 
     /* Minimal nav for checkout */
     .checkout-nav {
@@ -93,12 +120,12 @@
       align-items: center;
       gap: 6px;
       font-family: var(--font-primary);
-      font-size: var(--text-body-sm);
-      color: var(--color-gray-600);
+      font-size: var(--text-sm);
+      color: var(--color-neutral-600);
       text-decoration: none;
       transition: color var(--duration-fast);
     }
-    .checkout-back:hover { color: var(--color-primary); }
+    .checkout-back:hover { color: var(--brand-primary); }
     .checkout-back svg { width: 16px; height: 16px; }
 
     .disabled-section {
@@ -109,7 +136,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-size: var(--text-body-sm);
+      font-size: var(--text-sm);
       color: var(--color-green-700);
       font-weight: 500;
     }
@@ -117,7 +144,7 @@
 
     /* Footer */
     .site-footer {
-      background: var(--color-gray-900);
+      background: var(--color-neutral-900);
       color: var(--color-white);
       padding: 64px 24px 32px;
     }
@@ -135,17 +162,17 @@
       margin-bottom: 12px;
     }
     .footer-desc {
-      font-size: var(--text-body-sm);
-      color: var(--color-gray-500);
-      line-height: var(--leading-body-sm);
+      font-size: var(--text-sm);
+      color: var(--color-neutral-500);
+      line-height: var(--leading-sm);
     }
     .footer-heading {
-      font-family: var(--font-label);
+      font-family: var(--font-secondary);
       font-weight: 700;
       font-size: 10px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--color-gray-400);
+      color: var(--color-neutral-400);
       margin-bottom: 16px;
     }
     .footer-links {
@@ -155,8 +182,8 @@
       gap: 10px;
     }
     .footer-link {
-      font-size: var(--text-body-sm);
-      color: var(--color-gray-500);
+      font-size: var(--text-sm);
+      color: var(--color-neutral-500);
       text-decoration: none;
       transition: color var(--duration-fast);
     }
@@ -165,18 +192,18 @@
       max-width: 1200px;
       margin: 48px auto 0;
       padding-top: 24px;
-      border-top: 1px solid var(--color-gray-800);
+      border-top: 1px solid var(--color-neutral-800);
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     .footer-copyright {
-      font-size: var(--text-body-tiny);
-      color: var(--color-gray-600);
+      font-size: var(--text-xs);
+      color: var(--color-neutral-600);
     }
     .back-link {
-      font-size: var(--text-body-tiny);
-      color: var(--color-gray-500);
+      font-size: var(--text-xs);
+      color: var(--color-neutral-500);
       text-decoration: none;
       transition: color var(--duration-fast);
     }
@@ -296,7 +323,7 @@
                 <div style="position: relative;">
                   <input type="text" class="input" placeholder="1234 5678 9012 3456" style="padding-right: 44px;">
                   <span style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); display: flex;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-gray-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-neutral-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
                   </span>
                 </div>
               </div>
@@ -314,7 +341,7 @@
                   <div style="position: relative;">
                     <input type="text" class="input" placeholder="123">
                     <span style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); display: flex;">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-gray-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-neutral-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     </span>
                   </div>
                 </div>

@@ -7,8 +7,35 @@
   <link rel="stylesheet" href="../css/fonts.css">
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components/accordion.css">
+  <link rel="stylesheet" href="../css/components/alerts.css">
+  <link rel="stylesheet" href="../css/components/avatar.css">
+  <link rel="stylesheet" href="../css/components/badges.css">
+  <link rel="stylesheet" href="../css/components/breadcrumbs.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/cards.css">
+  <link rel="stylesheet" href="../css/components/chips.css">
+  <link rel="stylesheet" href="../css/components/divider.css">
+  <link rel="stylesheet" href="../css/components/dropdown.css">
+  <link rel="stylesheet" href="../css/components/empty-state.css">
+  <link rel="stylesheet" href="../css/components/inputs.css">
+  <link rel="stylesheet" href="../css/components/modal.css">
+  <link rel="stylesheet" href="../css/components/navigation.css">
+  <link rel="stylesheet" href="../css/components/order-summary.css">
+  <link rel="stylesheet" href="../css/components/pagination.css">
+  <link rel="stylesheet" href="../css/components/progress.css">
+  <link rel="stylesheet" href="../css/components/quantity-selector.css">
+  <link rel="stylesheet" href="../css/components/search-bar.css">
+  <link rel="stylesheet" href="../css/components/skeleton.css">
+  <link rel="stylesheet" href="../css/components/steps.css">
+  <link rel="stylesheet" href="../css/components/table.css">
+  <link rel="stylesheet" href="../css/components/tabs.css">
+  <link rel="stylesheet" href="../css/components/tags.css">
+  <link rel="stylesheet" href="../css/components/toasts.css">
+  <link rel="stylesheet" href="../css/components/toggle.css">
+  <link rel="stylesheet" href="../css/components/tooltip.css">
+  <link rel="stylesheet" href="../css/patterns.css">
   <style>
     .login-page {
       min-height: calc(100vh - 56px - 200px);
@@ -16,7 +43,7 @@
       align-items: center;
       justify-content: center;
       padding: 64px 24px;
-      background: var(--color-gray-50);
+      background: var(--color-neutral-050);
     }
     .login-card {
       background: var(--color-white);
@@ -42,12 +69,12 @@
       font-family: var(--font-primary);
       font-weight: 700;
       font-size: var(--text-h3);
-      color: var(--color-gray-900);
+      color: var(--color-neutral-900);
       margin-bottom: 4px;
     }
     .login-subtitle {
-      font-size: var(--text-body-sm);
-      color: var(--color-gray-500);
+      font-size: var(--text-sm);
+      color: var(--color-neutral-500);
     }
     .password-wrapper {
       position: relative;
@@ -64,14 +91,14 @@
       align-items: center;
       justify-content: center;
       padding: 4px;
-      color: var(--color-gray-400);
+      color: var(--color-neutral-400);
       transition: color var(--duration-fast);
     }
-    .password-toggle:hover { color: var(--color-gray-700); }
+    .password-toggle:hover { color: var(--color-neutral-700); }
     .password-toggle svg { width: 16px; height: 16px; }
     .forgot-link {
-      font-size: var(--text-body-sm);
-      color: var(--color-primary);
+      font-size: var(--text-sm);
+      color: var(--brand-primary);
       text-decoration: none;
       font-weight: 500;
       transition: color var(--duration-fast);
@@ -91,17 +118,17 @@
       background: var(--surface-outline-variant);
     }
     .divider-with-text span {
-      font-size: var(--text-body-sm);
-      color: var(--color-gray-400);
+      font-size: var(--text-sm);
+      color: var(--color-neutral-400);
       text-transform: lowercase;
     }
     .create-link {
       text-align: center;
-      font-size: var(--text-body-sm);
-      color: var(--color-gray-600);
+      font-size: var(--text-sm);
+      color: var(--color-neutral-600);
     }
     .create-link a {
-      color: var(--color-primary);
+      color: var(--brand-primary);
       text-decoration: none;
       font-weight: 500;
       transition: color var(--duration-fast);
@@ -110,7 +137,7 @@
 
     /* Footer */
     .site-footer {
-      background: var(--color-gray-900);
+      background: var(--color-neutral-900);
       color: var(--color-white);
       padding: 64px 24px 32px;
     }
@@ -128,17 +155,17 @@
       margin-bottom: 12px;
     }
     .footer-desc {
-      font-size: var(--text-body-sm);
-      color: var(--color-gray-500);
-      line-height: var(--leading-body-sm);
+      font-size: var(--text-sm);
+      color: var(--color-neutral-500);
+      line-height: var(--leading-sm);
     }
     .footer-heading {
-      font-family: var(--font-label);
+      font-family: var(--font-secondary);
       font-weight: 700;
       font-size: 10px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--color-gray-400);
+      color: var(--color-neutral-400);
       margin-bottom: 16px;
     }
     .footer-links {
@@ -148,8 +175,8 @@
       gap: 10px;
     }
     .footer-link {
-      font-size: var(--text-body-sm);
-      color: var(--color-gray-500);
+      font-size: var(--text-sm);
+      color: var(--color-neutral-500);
       text-decoration: none;
       transition: color var(--duration-fast);
     }
@@ -158,18 +185,18 @@
       max-width: 1200px;
       margin: 48px auto 0;
       padding-top: 24px;
-      border-top: 1px solid var(--color-gray-800);
+      border-top: 1px solid var(--color-neutral-800);
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     .footer-copyright {
-      font-size: var(--text-body-tiny);
-      color: var(--color-gray-600);
+      font-size: var(--text-xs);
+      color: var(--color-neutral-600);
     }
     .back-link {
-      font-size: var(--text-body-tiny);
-      color: var(--color-gray-500);
+      font-size: var(--text-xs);
+      color: var(--color-neutral-500);
       text-decoration: none;
       transition: color var(--duration-fast);
     }
@@ -201,7 +228,7 @@
       <button class="nav-icon" aria-label="Search">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
       </button>
-      <a href="login.html" class="nav-icon" aria-label="Account" style="color: var(--color-primary);">
+      <a href="login.html" class="nav-icon" aria-label="Account" style="color: var(--brand-primary);">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
       </a>
       <a href="cart.html" class="nav-icon" aria-label="Cart">
@@ -240,7 +267,7 @@
           <div style="position: relative;">
             <input type="email" id="login-email" class="input" placeholder="your@email.com" style="padding-left: 40px;">
             <span style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); display: flex;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gray-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-neutral-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             </span>
           </div>
         </div>

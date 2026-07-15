@@ -1,0 +1,97 @@
+/* ══════════════════════════════════════════════════════════════ */
+/* ALERTS                                                          */
+/* Requires: tokens.css, base.css loaded first                   */
+/* 5 states — success/info/warning/error/brand. Dark theme is    */
+/* handled automatically via [data-theme='dark'] token overrides */
+/* in tokens.css — no separate dark modifier classes needed.     */
+/* ══════════════════════════════════════════════════════════════ */
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--rounded-md);
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  line-height: var(--leading-sm);
+  border: 1px solid transparent;
+}
+
+.alert-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alert-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.alert-heading {
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.alert-text {
+  font-weight: 400;
+  opacity: 0.85;
+  font-size: 13px;
+}
+
+.alert-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Light surface states */
+.alert--success {
+  background: var(--surface-success-subtle);
+  border-color: var(--border-success-subtle);
+  color: var(--text-success-default);
+}
+.alert--success .alert-icon {
+  color: var(--icon-success-default);
+}
+
+.alert--info {
+  background: var(--surface-info-subtle);
+  border-color: var(--border-info-subtle);
+  color: var(--text-info-subtle);
+}
+.alert--info .alert-icon {
+  color: var(--icon-info-default);
+}
+
+.alert--warning {
+  background: var(--surface-warning-subtle);
+  border-color: var(--border-warning-subtle);
+  color: var(--text-warning-subtle);
+}
+.alert--warning .alert-icon {
+  color: var(--icon-warning-default);
+}
+
+.alert--error {
+  background: var(--surface-error-subtle);
+  border-color: var(--border-error-subtle);
+  color: var(--text-error-subtle);
+}
+.alert--error .alert-icon {
+  color: var(--icon-error-default);
+}
+
+.alert--brand {
+  background: var(--color-green-900);
+  border-color: var(--color-green-800);
+  color: var(--color-white);
+}
+.alert--brand .alert-icon {
+  color: var(--color-green-500);
+}
+.alert--brand .alert-text {
+  opacity: 0.65;
+}
+

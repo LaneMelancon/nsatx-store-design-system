@@ -1,0 +1,41 @@
+/* ══════════════════════════════════════════════════════════════ */
+/* SKELETON LOADER                                                 */
+/* Requires: tokens.css, base.css loaded first                   */
+/* ══════════════════════════════════════════════════════════════ */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-neutral-100) 25%,
+    var(--color-neutral-050) 50%,
+    var(--color-neutral-100) 75%
+  );
+  background-size: 200px 100%;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--rounded);
+}
+.skeleton--text {
+  height: 14px;
+  border-radius: var(--rounded-sm);
+}
+.skeleton--heading {
+  height: 24px;
+  width: 60%;
+  border-radius: var(--rounded-sm);
+}
+.skeleton--image {
+  height: 160px;
+  border-radius: var(--rounded-md);
+}
+.skeleton--circle {
+  border-radius: var(--rounded-full);
+}
+

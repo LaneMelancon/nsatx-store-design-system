@@ -1,0 +1,40 @@
+/* ══════════════════════════════════════════════════════════════ */
+/* SEARCH BAR                                                      */
+/* Requires: tokens.css, base.css loaded first                   */
+/* ══════════════════════════════════════════════════════════════ */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--surface-outline);
+  border-radius: var(--rounded-full);
+  background: var(--color-white);
+  transition:
+    border-color var(--duration-fast),
+    box-shadow var(--duration-fast);
+}
+.search-bar:focus-within {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px var(--color-green-300);
+}
+.search-bar svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-neutral-400);
+  flex-shrink: 0;
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  color: var(--color-neutral-900);
+  background: transparent;
+  flex: 1;
+  min-width: 0;
+}
+.search-bar input::placeholder {
+  color: var(--color-neutral-400);
+}
+

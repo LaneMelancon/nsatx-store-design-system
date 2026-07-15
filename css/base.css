@@ -10,12 +10,12 @@ Requires: tokens.css loaded first
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin: var(--space-none);
+  padding: var(--space-none);
 }
 
 html {
-  font-size: 16px;
+  font-size: var(--text-reg);
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,11 +23,11 @@ html {
 
 body {
   font-family: var(--font-primary);
-  font-weight: 400;
-  font-size: var(--text-body-reg);
-  line-height: var(--leading-body-reg);
-  color: var(--color-gray-900);
-  background: var(--color-white);
+  font-weight: var(--font-normal);
+  font-size: var(--text-reg);
+  line-height: var(--leading-reg);
+  color: var(--text-brand-default);
+  background: var(--surface-brand-default);
   min-height: 100vh;
 }
 
@@ -41,13 +41,14 @@ a {
   text-decoration: none;
 }
 button {
-  font-family: inherit;
+  font-family: var(--font-primary);
+  font-weight: var(--font-medium);
   cursor: pointer;
 }
 input,
 select,
 textarea {
-  font-family: inherit;
+  font-family: var(--font-primary);
 }
 
 /* ─────────────────────────────── */
@@ -56,48 +57,48 @@ textarea {
 .h1,
 h1 {
   font-family: var(--font-primary);
-  font-weight: 700;
+  font-weight: var(--font-normal);
   font-size: var(--text-h1);
   line-height: var(--leading-h1);
   letter-spacing: var(--tracking-h1);
-  color: var(--color-gray-900);
+  color: var(--text-brand-heading);
 }
 
 .h2,
 h2 {
   font-family: var(--font-primary);
-  font-weight: 700;
+  font-weight: var(--font-normal);
   font-size: var(--text-h2);
   line-height: var(--leading-h2);
   letter-spacing: var(--tracking-h2);
-  color: var(--color-gray-900);
+  color: var(--text-brand-heading);
 }
 
 .h3,
 h3 {
   font-family: var(--font-primary);
-  font-weight: 700;
+  font-weight: var(--font-normal);
   font-size: var(--text-h3);
   line-height: var(--leading-h3);
-  color: var(--color-gray-900);
+  color: var(--text-brand-heading);
 }
 
 .h4,
 h4 {
   font-family: var(--font-primary);
-  font-weight: 500;
-  font-size: var(--text-h4);
-  line-height: var(--leading-h4);
-  color: var(--color-gray-900);
+  font-weight: var(--font-normal);
+  font-size: var(--text-h3);
+  line-height: var(--leading-h3);
+  color: var(--text-brand-heading);
 }
 
 .h5,
 h5 {
   font-family: var(--font-primary);
-  font-weight: 500;
+  font-weight: var(--font-normal);
   font-size: var(--text-h5);
   line-height: var(--leading-h5);
-  color: var(--color-gray-900);
+  color: var(--text-brand-heading);
 }
 
 /* ─────────────────────────────── */
@@ -105,90 +106,119 @@ h5 {
 /* ─────────────────────────────── */
 .eyebrow {
   font-family: var(--font-secondary);
-  font-weight: 700;
+  font-weight: var(--font-bold);
   font-size: var(--text-eyebrow);
   line-height: var(--leading-eyebrow);
   letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
-  margin-bottom: var(--space-2);
+  color: var(--text-brand-accent);
 }
 
 /* ─────────────────────────────── */
 /* TYPOGRAPHY — Body               */
 /* ─────────────────────────────── */
 .text-lg {
-  font-size: var(--text-body-lg);
-  line-height: var(--leading-body-lg);
-  font-weight: 400;
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  font-weight: var(--font-normal);
+}
+
+.text-md {
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--font-normal);
 }
 
 .text-reg {
-  font-size: var(--text-body-reg);
-  line-height: var(--leading-body-reg);
-  font-weight: 400;
+  font-size: var(--text-reg);
+  line-height: var(--leading-reg);
+  font-weight: var(--font-normal);
 }
 
 .text-sm {
-  font-size: var(--text-body-sm);
-  line-height: var(--leading-body-sm);
-  font-weight: 400;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  font-weight: var(--font-normal);
 }
 
-.text-tiny {
-  font-size: var(--text-body-tiny);
-  line-height: var(--leading-body-tiny);
-  font-weight: 400;
+.text-xs {
+  font-size: var(--text-xs);
+  line-height: var(--leading-xs);
+  font-weight: var(--font-normal);
+}
+
+.text-2xs {
+  font-size: var(--text-2xs);
+  line-height: var(--leading-2xs);
+  font-weight: var(--font-normal);
 }
 
 /* ─────────────────────────────── */
 /* TYPOGRAPHY — Utility            */
 /* ─────────────────────────────── */
 .font-medium {
-  font-weight: 500;
+  font-weight: var(--font-medium);
 }
 .font-bold {
-  font-weight: 700;
+  font-weight: var(--font-bold);
 }
 .uppercase {
   text-transform: uppercase;
 }
+
+/* ––– Tracking (letter-spacing) ––– */
+.tracking-tight {
+  letter-spacing: -0.0625rem;
+}
+
+.tracking-normal {
+  letter-spacing: 0rem;
+}
+
 .tracking-wide {
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
+}
+
+.tracking-wider {
+  letter-spacing: 0.125rem;
 }
 
 /* ─────────────────────────────── */
 /* COLOR — Text utilities          */
 /* ─────────────────────────────── */
-.text-primary {
-  color: var(--color-primary);
+.text-brand-default {
+  color: var(--text-brand-default);
 }
-.text-muted {
-  color: var(--color-gray-600);
+.text-heading {
+  color: var(--text-brand-heading);
 }
-.text-secondary {
-  color: var(--color-gray-500);
+.text-body {
+  color: var(--text-brand-body);
 }
 .text-success {
-  color: var(--sys-success-700);
+  color: var(--text-success-default);
 }
 .text-info {
-  color: var(--sys-info-600);
+  color: var(--text-info-default);
 }
 .text-warning {
-  color: var(--sys-warning-600);
+  color: var(--text-warning-default);
 }
 .text-error {
-  color: var(--sys-error-icon);
+  color: var(--text-error-default);
 }
 .text-white {
-  color: var(--color-white);
+  color: var(--system-alt);
+}
+.text-black {
+  color: var(--system-default);
 }
 
 /* ─────────────────────────────── */
 /* FOCUS                           */
 /* ─────────────────────────────── */
 :focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--brand-primary);
   outline-offset: 2px;
 }
 
@@ -204,22 +234,5 @@ h5 {
   }
   html {
     scroll-behavior: auto;
-  }
-}
-
-/* ─────────────────────────────── */
-/* RESPONSIVE HEADING OVERRIDES    */
-/* ─────────────────────────────── */
-@media (max-width: 640px) {
-  .h1,
-  h1 {
-    font-size: var(--text-h1-mob);
-    line-height: var(--leading-h1-mob);
-  }
-  .h2,
-  h2 {
-    font-size: var(--text-h2-mob);
-    line-height: var(--leading-h2-mob);
-    letter-spacing: var(--tracking-h2-mob);
   }
 }

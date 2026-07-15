@@ -7,8 +7,35 @@
   <link rel="stylesheet" href="../css/fonts.css">
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components/accordion.css">
+  <link rel="stylesheet" href="../css/components/alerts.css">
+  <link rel="stylesheet" href="../css/components/avatar.css">
+  <link rel="stylesheet" href="../css/components/badges.css">
+  <link rel="stylesheet" href="../css/components/breadcrumbs.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/cards.css">
+  <link rel="stylesheet" href="../css/components/chips.css">
+  <link rel="stylesheet" href="../css/components/divider.css">
+  <link rel="stylesheet" href="../css/components/dropdown.css">
+  <link rel="stylesheet" href="../css/components/empty-state.css">
+  <link rel="stylesheet" href="../css/components/inputs.css">
+  <link rel="stylesheet" href="../css/components/modal.css">
+  <link rel="stylesheet" href="../css/components/navigation.css">
+  <link rel="stylesheet" href="../css/components/order-summary.css">
+  <link rel="stylesheet" href="../css/components/pagination.css">
+  <link rel="stylesheet" href="../css/components/progress.css">
+  <link rel="stylesheet" href="../css/components/quantity-selector.css">
+  <link rel="stylesheet" href="../css/components/search-bar.css">
+  <link rel="stylesheet" href="../css/components/skeleton.css">
+  <link rel="stylesheet" href="../css/components/steps.css">
+  <link rel="stylesheet" href="../css/components/table.css">
+  <link rel="stylesheet" href="../css/components/tabs.css">
+  <link rel="stylesheet" href="../css/components/tags.css">
+  <link rel="stylesheet" href="../css/components/toasts.css">
+  <link rel="stylesheet" href="../css/components/toggle.css">
+  <link rel="stylesheet" href="../css/components/tooltip.css">
+  <link rel="stylesheet" href="../css/patterns.css">
   <style>
     .pdp-layout {
       display: grid;
@@ -17,7 +44,7 @@
       padding: 40px 0 64px;
     }
     .pdp-image {
-      background: var(--color-green-50);
+      background: var(--color-green-050);
       border-radius: var(--rounded-lg);
       display: flex;
       align-items: center;
@@ -28,12 +55,12 @@
     .pdp-image svg { width: 80px; height: 80px; color: var(--color-green-200); }
     .pdp-info { padding-top: 8px; }
     .pdp-brand {
-      font-family: var(--font-label);
+      font-family: var(--font-secondary);
       font-weight: 700;
       font-size: 12px;
       letter-spacing: 1px;
       text-transform: uppercase;
-      color: var(--color-gray-500);
+      color: var(--color-neutral-500);
       margin-bottom: 8px;
     }
     .pdp-title {
@@ -42,14 +69,14 @@
       font-size: var(--text-h2);
       line-height: var(--leading-h2);
       letter-spacing: var(--tracking-h2);
-      color: var(--color-gray-900);
+      color: var(--color-neutral-900);
       margin-bottom: 12px;
     }
     .pdp-price {
       font-family: var(--font-primary);
       font-weight: 700;
       font-size: var(--text-h3);
-      color: var(--color-primary);
+      color: var(--brand-primary);
       margin-bottom: 16px;
     }
     .pdp-rating {
@@ -59,13 +86,13 @@
       margin-bottom: 20px;
     }
     .pdp-stars { display: flex; gap: 2px; }
-    .pdp-stars svg { width: 16px; height: 16px; color: var(--sys-warning-500); fill: var(--sys-warning-500); }
-    .pdp-stars svg.star-empty { fill: none; color: var(--color-gray-300); }
-    .pdp-rating-text { font-size: var(--text-body-sm); color: var(--color-gray-500); }
+    .pdp-stars svg { width: 16px; height: 16px; color: var(--icon-warning-default); fill: var(--icon-warning-default); }
+    .pdp-stars svg.star-empty { fill: none; color: var(--color-neutral-300); }
+    .pdp-rating-text { font-size: var(--text-sm); color: var(--color-neutral-500); }
     .pdp-desc {
-      font-size: var(--text-body-reg);
-      line-height: var(--leading-body-reg);
-      color: var(--color-gray-600);
+      font-size: var(--text-reg);
+      line-height: var(--leading-reg);
+      color: var(--color-neutral-600);
       margin-bottom: 24px;
     }
     .pdp-actions {
@@ -85,17 +112,17 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: var(--text-body-sm);
-      color: var(--color-gray-600);
+      font-size: var(--text-sm);
+      color: var(--color-neutral-600);
     }
     .pdp-meta-item svg { width: 16px; height: 16px; color: var(--color-green-700); flex-shrink: 0; }
     .tab-content {
       padding: 32px 0 64px;
     }
     .tab-content p {
-      font-size: var(--text-body-reg);
-      line-height: var(--leading-body-reg);
-      color: var(--color-gray-600);
+      font-size: var(--text-reg);
+      line-height: var(--leading-reg);
+      color: var(--color-neutral-600);
       margin-bottom: 16px;
       max-width: 720px;
     }
@@ -107,9 +134,9 @@
       margin-bottom: 16px;
     }
     .tab-content ul li {
-      font-size: var(--text-body-sm);
-      color: var(--color-gray-600);
-      line-height: var(--leading-body-sm);
+      font-size: var(--text-sm);
+      color: var(--color-neutral-600);
+      line-height: var(--leading-sm);
       padding: 6px 0;
       padding-left: 20px;
       position: relative;
@@ -124,20 +151,20 @@
       border-radius: var(--rounded-full);
       background: var(--color-green-500);
     }
-    .related-section { padding: 64px 0; background: var(--color-gray-50); }
+    .related-section { padding: 64px 0; background: var(--color-neutral-050); }
 
     /* Footer */
-    .site-footer { background: var(--color-gray-900); color: var(--color-white); padding: 64px 24px 32px; }
+    .site-footer { background: var(--color-neutral-900); color: var(--color-white); padding: 64px 24px 32px; }
     .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 32px; max-width: 1200px; margin: 0 auto; }
     .footer-logo-text { font-family: var(--font-primary); font-weight: 700; font-size: 16px; margin-bottom: 12px; }
-    .footer-desc { font-size: var(--text-body-sm); color: var(--color-gray-500); line-height: var(--leading-body-sm); }
-    .footer-heading { font-family: var(--font-label); font-weight: 700; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-gray-400); margin-bottom: 16px; }
+    .footer-desc { font-size: var(--text-sm); color: var(--color-neutral-500); line-height: var(--leading-sm); }
+    .footer-heading { font-family: var(--font-secondary); font-weight: 700; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-neutral-400); margin-bottom: 16px; }
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .footer-link { font-size: var(--text-body-sm); color: var(--color-gray-500); text-decoration: none; transition: color var(--duration-fast); }
+    .footer-link { font-size: var(--text-sm); color: var(--color-neutral-500); text-decoration: none; transition: color var(--duration-fast); }
     .footer-link:hover { color: var(--color-green-400); }
-    .footer-bottom { max-width: 1200px; margin: 48px auto 0; padding-top: 24px; border-top: 1px solid var(--color-gray-800); display: flex; justify-content: space-between; align-items: center; }
-    .footer-copyright { font-size: var(--text-body-tiny); color: var(--color-gray-600); }
-    .back-link { font-size: var(--text-body-tiny); color: var(--color-gray-500); text-decoration: none; }
+    .footer-bottom { max-width: 1200px; margin: 48px auto 0; padding-top: 24px; border-top: 1px solid var(--color-neutral-800); display: flex; justify-content: space-between; align-items: center; }
+    .footer-copyright { font-size: var(--text-xs); color: var(--color-neutral-600); }
+    .back-link { font-size: var(--text-xs); color: var(--color-neutral-500); text-decoration: none; }
     .back-link:hover { color: var(--color-green-400); }
 
     @media (max-width: 900px) {
@@ -289,7 +316,7 @@
   <section class="related-section">
     <div class="container">
       <div style="margin-bottom: 32px;">
-        <p class="eyebrow" style="color: var(--color-primary); margin-bottom: 8px;">You May Also Like</p>
+        <p class="eyebrow" style="color: var(--brand-primary); margin-bottom: 8px;">You May Also Like</p>
         <h3 class="h3">Related Products</h3>
       </div>
       <div class="grid grid-4">

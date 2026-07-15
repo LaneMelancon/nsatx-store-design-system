@@ -7,8 +7,35 @@
     <link rel="stylesheet" href="../css/fonts.css" />
     <link rel="stylesheet" href="../css/tokens.css" />
     <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/components.css" />
-    <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components/accordion.css">
+  <link rel="stylesheet" href="../css/components/alerts.css">
+  <link rel="stylesheet" href="../css/components/avatar.css">
+  <link rel="stylesheet" href="../css/components/badges.css">
+  <link rel="stylesheet" href="../css/components/breadcrumbs.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/cards.css">
+  <link rel="stylesheet" href="../css/components/chips.css">
+  <link rel="stylesheet" href="../css/components/divider.css">
+  <link rel="stylesheet" href="../css/components/dropdown.css">
+  <link rel="stylesheet" href="../css/components/empty-state.css">
+  <link rel="stylesheet" href="../css/components/inputs.css">
+  <link rel="stylesheet" href="../css/components/modal.css">
+  <link rel="stylesheet" href="../css/components/navigation.css">
+  <link rel="stylesheet" href="../css/components/order-summary.css">
+  <link rel="stylesheet" href="../css/components/pagination.css">
+  <link rel="stylesheet" href="../css/components/progress.css">
+  <link rel="stylesheet" href="../css/components/quantity-selector.css">
+  <link rel="stylesheet" href="../css/components/search-bar.css">
+  <link rel="stylesheet" href="../css/components/skeleton.css">
+  <link rel="stylesheet" href="../css/components/steps.css">
+  <link rel="stylesheet" href="../css/components/table.css">
+  <link rel="stylesheet" href="../css/components/tabs.css">
+  <link rel="stylesheet" href="../css/components/tags.css">
+  <link rel="stylesheet" href="../css/components/toasts.css">
+  <link rel="stylesheet" href="../css/components/toggle.css">
+  <link rel="stylesheet" href="../css/components/tooltip.css">
+  <link rel="stylesheet" href="../css/patterns.css">
     <style>
       .account-layout {
         display: grid;
@@ -17,17 +44,17 @@
         min-height: calc(100vh - 56px - 200px);
       }
       .account-sidebar {
-        background: var(--color-gray-50);
+        background: var(--color-neutral-050);
         border-right: 1px solid var(--surface-outline-variant);
         padding: 32px 0;
       }
       .account-sidebar-title {
-        font-family: var(--font-label);
+        font-family: var(--font-secondary);
         font-weight: 700;
         font-size: 9px;
         letter-spacing: 1.5px;
         text-transform: uppercase;
-        color: var(--color-gray-400);
+        color: var(--color-neutral-400);
         padding: 0 20px;
         margin-bottom: 12px;
       }
@@ -44,9 +71,9 @@
         gap: 10px;
         padding: 8px 12px;
         font-family: var(--font-primary);
-        font-size: var(--text-body-sm);
+        font-size: var(--text-sm);
         font-weight: 400;
-        color: var(--color-gray-600);
+        color: var(--color-neutral-600);
         text-decoration: none;
         border-radius: var(--rounded);
         transition:
@@ -54,12 +81,12 @@
           color var(--duration-fast);
       }
       .account-nav-link:hover {
-        background: var(--color-gray-100);
-        color: var(--color-gray-900);
+        background: var(--color-neutral-100);
+        color: var(--color-neutral-900);
       }
       .account-nav-link.is-active {
-        background: var(--color-green-50);
-        color: var(--color-primary);
+        background: var(--color-green-050);
+        color: var(--brand-primary);
         font-weight: 500;
       }
       .account-nav-link svg {
@@ -68,7 +95,7 @@
         flex-shrink: 0;
       }
       .account-nav-link.is-active svg {
-        color: var(--color-primary);
+        color: var(--brand-primary);
       }
 
       .account-main {
@@ -87,12 +114,12 @@
         font-family: var(--font-primary);
         font-weight: 700;
         font-size: var(--text-h3);
-        color: var(--color-gray-900);
+        color: var(--color-neutral-900);
         margin-bottom: 4px;
       }
       .welcome-text p {
-        font-size: var(--text-body-sm);
-        color: var(--color-gray-500);
+        font-size: var(--text-sm);
+        color: var(--color-neutral-500);
       }
 
       /* Stat cards */
@@ -103,7 +130,7 @@
         margin-bottom: 40px;
       }
       .stat-card {
-        background: var(--color-gray-50);
+        background: var(--color-neutral-050);
         border: 1px solid var(--surface-outline-variant);
         border-radius: var(--rounded-lg);
         padding: 20px;
@@ -112,7 +139,7 @@
         width: 36px;
         height: 36px;
         border-radius: var(--rounded);
-        background: var(--color-green-50);
+        background: var(--color-green-050);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -127,12 +154,12 @@
         font-family: var(--font-primary);
         font-weight: 700;
         font-size: var(--text-h3);
-        color: var(--color-gray-900);
+        color: var(--color-neutral-900);
         margin-bottom: 2px;
       }
       .stat-card-label {
-        font-size: var(--text-body-sm);
-        color: var(--color-gray-500);
+        font-size: var(--text-sm);
+        color: var(--color-neutral-500);
       }
 
       /* Section header */
@@ -146,7 +173,7 @@
         font-family: var(--font-primary);
         font-weight: 700;
         font-size: var(--text-h4);
-        color: var(--color-gray-900);
+        color: var(--color-neutral-900);
       }
 
       /* Logout link */
@@ -157,9 +184,9 @@
         padding: 8px 12px;
         margin-top: 24px;
         font-family: var(--font-primary);
-        font-size: var(--text-body-sm);
+        font-size: var(--text-sm);
         font-weight: 400;
-        color: var(--color-gray-500);
+        color: var(--color-neutral-500);
         text-decoration: none;
         border-radius: var(--rounded);
         transition:
@@ -167,8 +194,8 @@
           color var(--duration-fast);
       }
       .logout-link:hover {
-        background: var(--sys-error-50);
-        color: var(--sys-error-icon);
+        background: var(--surface-error-subtle);
+        color: var(--icon-error-default);
       }
       .logout-link svg {
         width: 16px;
@@ -177,7 +204,7 @@
 
       /* Footer */
       .site-footer {
-        background: var(--color-gray-900);
+        background: var(--color-neutral-900);
         color: var(--color-white);
         padding: 64px 24px 32px;
       }
@@ -195,17 +222,17 @@
         margin-bottom: 12px;
       }
       .footer-desc {
-        font-size: var(--text-body-sm);
-        color: var(--color-gray-500);
-        line-height: var(--leading-body-sm);
+        font-size: var(--text-sm);
+        color: var(--color-neutral-500);
+        line-height: var(--leading-sm);
       }
       .footer-heading {
-        font-family: var(--font-label);
+        font-family: var(--font-secondary);
         font-weight: 700;
         font-size: 10px;
         letter-spacing: 1.5px;
         text-transform: uppercase;
-        color: var(--color-gray-400);
+        color: var(--color-neutral-400);
         margin-bottom: 16px;
       }
       .footer-links {
@@ -215,8 +242,8 @@
         gap: 10px;
       }
       .footer-link {
-        font-size: var(--text-body-sm);
-        color: var(--color-gray-500);
+        font-size: var(--text-sm);
+        color: var(--color-neutral-500);
         text-decoration: none;
         transition: color var(--duration-fast);
       }
@@ -227,18 +254,18 @@
         max-width: 1200px;
         margin: 48px auto 0;
         padding-top: 24px;
-        border-top: 1px solid var(--color-gray-800);
+        border-top: 1px solid var(--color-neutral-800);
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
       .footer-copyright {
-        font-size: var(--text-body-tiny);
-        color: var(--color-gray-600);
+        font-size: var(--text-xs);
+        color: var(--color-neutral-600);
       }
       .back-link {
-        font-size: var(--text-body-tiny);
-        color: var(--color-gray-500);
+        font-size: var(--text-xs);
+        color: var(--color-neutral-500);
         text-decoration: none;
         transition: color var(--duration-fast);
       }
@@ -311,7 +338,7 @@
           href="account.html"
           class="nav-icon"
           aria-label="Account"
-          style="color: var(--color-primary)"
+          style="color: var(--brand-primary)"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -520,7 +547,7 @@
             align-items: center;
             gap: 4px;
             font-size: 12px;
-            color: var(--color-gray-400);
+            color: var(--color-neutral-400);
             text-decoration: none;
             margin-bottom: 24px;
             transition: color 150ms;
@@ -647,7 +674,7 @@
             </thead>
             <tbody>
               <tr>
-                <td style="font-weight: 500; color: var(--color-gray-900)">
+                <td style="font-weight: 500; color: var(--color-neutral-900)">
                   #NS-2026-0847
                 </td>
                 <td>Jun 18, 2026</td>
@@ -656,14 +683,14 @@
                   style="
                     text-align: right;
                     font-weight: 500;
-                    color: var(--color-gray-900);
+                    color: var(--color-neutral-900);
                   "
                 >
                   $166.20
                 </td>
               </tr>
               <tr>
-                <td style="font-weight: 500; color: var(--color-gray-900)">
+                <td style="font-weight: 500; color: var(--color-neutral-900)">
                   #NS-2026-0831
                 </td>
                 <td>Jun 4, 2026</td>
@@ -672,14 +699,14 @@
                   style="
                     text-align: right;
                     font-weight: 500;
-                    color: var(--color-gray-900);
+                    color: var(--color-neutral-900);
                   "
                 >
                   $118.00
                 </td>
               </tr>
               <tr>
-                <td style="font-weight: 500; color: var(--color-gray-900)">
+                <td style="font-weight: 500; color: var(--color-neutral-900)">
                   #NS-2026-0798
                 </td>
                 <td>May 21, 2026</td>
@@ -688,14 +715,14 @@
                   style="
                     text-align: right;
                     font-weight: 500;
-                    color: var(--color-gray-900);
+                    color: var(--color-neutral-900);
                   "
                 >
                   $72.00
                 </td>
               </tr>
               <tr>
-                <td style="font-weight: 500; color: var(--color-gray-900)">
+                <td style="font-weight: 500; color: var(--color-neutral-900)">
                   #NS-2026-0756
                 </td>
                 <td>May 3, 2026</td>
@@ -704,7 +731,7 @@
                   style="
                     text-align: right;
                     font-weight: 500;
-                    color: var(--color-gray-900);
+                    color: var(--color-neutral-900);
                   "
                 >
                   $94.00

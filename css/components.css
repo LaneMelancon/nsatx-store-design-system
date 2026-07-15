@@ -17,13 +17,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: var(--space-sm);
   font-family: var(--font-primary);
-  font-weight: 500;
-  border: 1.5px solid var(--btn-border, transparent);
+  font-weight: var(--font-medium);
+  border: 1.5px solid transparent;
   border-radius: var(--rounded);
-  background: var(--btn-bg, var(--color-gray-800));
-  color: var(--btn-text, var(--color-white));
+  background: var(--brand-primary);
+  color: var(--color-green-025);
   cursor: pointer;
   transition:
     background var(--duration-fast),
@@ -33,22 +33,22 @@
     transform var(--duration-fast);
   white-space: nowrap;
   text-decoration: none;
-  line-height: 1;
+  line-height: var(--leading-2xs);
 }
 
 .btn:hover {
-  background: var(--btn-bg-hover, var(--btn-bg));
-  color: var(--btn-text-hover, var(--btn-text));
-  border-color: var(--btn-border-hover, var(--btn-border, transparent));
+  background: var(--brand-primary-alt);
+  color: var(--text-brand-accent);
+  border-color: transparent;
 }
 
 .btn:active {
-  transform: scale(0.97);
+  transform: scale(0.98);
 }
 
 .btn:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px var(--color-green-300);
+  box-shadow: 0 0 0 2px var(--color-red-500);
 }
 
 .btn:disabled,
@@ -65,71 +65,44 @@
 }
 
 /* Sizes */
-.btn--sm {
+.btn-sm {
   font-size: 12px;
   padding: 7px 14px;
 }
-.btn--md {
+.btn-md {
   font-size: 14px;
   padding: 10px 20px;
 }
-.btn--lg {
+.btn-lg {
   font-size: 16px;
   padding: 14px 28px;
   border-radius: var(--rounded-md);
 }
 
 /* ── PRIMARY (green-700) — for light backgrounds ── */
-.btn--primary {
-  --btn-bg: var(--color-green-700);
-  --btn-text: var(--color-white);
-  --btn-bg-hover: var(--color-green-600);
-}
-
-.btn--primary-outline {
+.btn-primary-outline {
   --btn-bg: transparent;
-  --btn-text: var(--color-green-900);
+  --btn-text: var(--color-green-025);
   --btn-border: var(--color-green-900);
   --btn-bg-hover: var(--color-green-50);
 }
 
-.btn--primary-text {
+.btn-primary-text {
   --btn-bg: transparent;
   --btn-text: var(--color-green-700);
   --btn-border: transparent;
   --btn-bg-hover: var(--color-green-50);
 }
 
-/* ── BRAND / MALACHITE — for dark/green-900 backgrounds ── */
-.btn--brand {
-  --btn-bg: var(--color-green-500);
-  --btn-text: var(--color-green-900);
-  --btn-bg-hover: var(--color-green-400);
-}
-
-.btn--brand-outline {
-  --btn-bg: transparent;
-  --btn-text: var(--color-white);
-  --btn-border: rgba(255, 255, 255, 0.4);
-  --btn-bg-hover: rgba(255, 255, 255, 0.06);
-}
-
-.btn--brand-text {
-  --btn-bg: transparent;
-  --btn-text: var(--color-green-400);
-  --btn-border: transparent;
-  --btn-bg-hover: rgba(60, 225, 116, 0.06);
-}
-
-/* ── DEFAULT — neutral ── */
-.btn--default {
+/* ── DEFAULT — System ── */
+.btn-default {
   --btn-bg: var(--color-gray-800);
   --btn-text: var(--color-white);
   --btn-bg-hover: var(--color-gray-700);
 }
 
 /* ── CANCEL — low emphasis ── */
-.btn--cancel {
+.btn-cancel {
   --btn-bg: var(--surface-high);
   --btn-text: var(--color-gray-700);
   --btn-border: transparent;
@@ -137,13 +110,13 @@
 }
 
 /* ── DELETE — destructive ── */
-.btn--delete {
+.btn-delete {
   --btn-bg: var(--sys-error-icon);
   --btn-text: var(--color-white);
   --btn-bg-hover: var(--sys-error-700);
 }
 
-.btn--delete-outline {
+.btn-delete-outline {
   --btn-bg: transparent;
   --btn-text: var(--sys-error-icon);
   --btn-border: var(--sys-error-icon);
@@ -151,7 +124,7 @@
 }
 
 /* ── OUTLINE generic modifier ── */
-.btn--outline {
+.btn-outline {
   --btn-bg: transparent;
   --btn-border: var(--color-gray-300);
   --btn-text: var(--color-gray-700);
@@ -159,7 +132,7 @@
 }
 
 /* ── TEXT generic modifier ── */
-.btn--text {
+.btn-text {
   --btn-bg: transparent;
   --btn-border: transparent;
   --btn-text: var(--color-gray-700);
@@ -167,14 +140,14 @@
 }
 
 /* ── ICON BUTTON ── */
-.btn--icon {
+.btn-icon {
   padding: 8px;
   border-radius: var(--rounded);
 }
-.btn--icon.btn--sm {
+.btn-icon.btn--sm {
   padding: 6px;
 }
-.btn--icon.btn--lg {
+.btn-icon.btn--lg {
   padding: 12px;
 }
 

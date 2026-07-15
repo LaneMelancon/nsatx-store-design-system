@@ -1,0 +1,36 @@
+/* ══════════════════════════════════════════════════════════════ */
+/* TABLE                                                           */
+/* Requires: tokens.css, base.css loaded first                   */
+/* ══════════════════════════════════════════════════════════════ */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+}
+
+.table th {
+  text-align: left;
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--color-neutral-700);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.table td {
+  padding: 10px 14px;
+  color: var(--color-neutral-600);
+  border-bottom: 1px solid var(--color-neutral-100);
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table--striped tr:nth-child(even) td {
+  background: var(--color-neutral-050);
+}
+

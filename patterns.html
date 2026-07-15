@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section Patterns — NeuroSolution Design System</title>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/playground.css" />
+    <link rel="stylesheet" href="css/components/accordion.css" />
+    <link rel="stylesheet" href="css/components/alerts.css" />
+    <link rel="stylesheet" href="css/components/avatar.css" />
+    <link rel="stylesheet" href="css/components/badges.css" />
+    <link rel="stylesheet" href="css/components/breadcrumbs.css" />
+    <link rel="stylesheet" href="css/components/buttons.css" />
+    <link rel="stylesheet" href="css/components/cards.css" />
+    <link rel="stylesheet" href="css/components/chips.css" />
+    <link rel="stylesheet" href="css/components/divider.css" />
+    <link rel="stylesheet" href="css/components/dropdown.css" />
+    <link rel="stylesheet" href="css/components/empty-state.css" />
+    <link rel="stylesheet" href="css/components/inputs.css" />
+    <link rel="stylesheet" href="css/components/modal.css" />
+    <link rel="stylesheet" href="css/components/navigation.css" />
+    <link rel="stylesheet" href="css/components/order-summary.css" />
+    <link rel="stylesheet" href="css/components/pagination.css" />
+    <link rel="stylesheet" href="css/components/progress.css" />
+    <link rel="stylesheet" href="css/components/quantity-selector.css" />
+    <link rel="stylesheet" href="css/components/search-bar.css" />
+    <link rel="stylesheet" href="css/components/skeleton.css" />
+    <link rel="stylesheet" href="css/components/steps.css" />
+    <link rel="stylesheet" href="css/components/table.css" />
+    <link rel="stylesheet" href="css/components/tabs.css" />
+    <link rel="stylesheet" href="css/components/tags.css" />
+    <link rel="stylesheet" href="css/components/toasts.css" />
+    <link rel="stylesheet" href="css/components/toggle.css" />
+    <link rel="stylesheet" href="css/components/tooltip.css" />
+    <link rel="stylesheet" href="css/patterns.css" />
+  </head>
+  <body>
+    <div class="pg-layout">
+      <!-- ═══ SIDEBAR ═══ -->
+      <aside class="pg-sidebar">
+        <div class="pg-sidebar-header">
+          <div class="pg-sidebar-logo">
+            <div class="pg-sidebar-logo-mark"></div>
+            <span class="pg-sidebar-logo-text">NeuroSolution</span>
+          </div>
+          <div class="pg-sidebar-subtitle">Design System</div>
+        </div>
+        <nav class="pg-sidebar-nav">
+          <div class="pg-sidebar-section">
+            <div class="pg-sidebar-section-label">Overview</div>
+            <a href="index.html" class="pg-sidebar-link">Design Direction</a>
+            <a href="foundations.html#colors" class="pg-sidebar-link">Colors</a>
+            <a href="foundations.html#typography" class="pg-sidebar-link">Typography</a>
+            <a href="foundations.html#spacing" class="pg-sidebar-link">Spacing &amp; Radius</a>
+            <a href="foundations.html#accessibility" class="pg-sidebar-link">Accessibility</a>
+          </div>
+          <div class="pg-sidebar-section">
+            <div class="pg-sidebar-section-label">Components</div>
+            <a href="components.html#buttons" class="pg-sidebar-link">Buttons</a>
+            <a href="components.html#badges-chips" class="pg-sidebar-link">Badges &amp; Chips</a>
+            <a href="components.html#tags" class="pg-sidebar-link">Tags</a>
+            <a href="components.html#inputs" class="pg-sidebar-link">Form Inputs</a>
+            <a href="components.html#cards" class="pg-sidebar-link">Cards</a>
+            <a href="components.html#alerts" class="pg-sidebar-link">Alerts</a>
+            <a href="components.html#toasts" class="pg-sidebar-link">Toasts</a>
+            <a href="components.html#navigation" class="pg-sidebar-link">Navigation</a>
+            <a href="components.html#progress" class="pg-sidebar-link">Progress</a>
+            <a href="components.html#tabs" class="pg-sidebar-link">Tabs</a>
+            <a href="components.html#breadcrumbs" class="pg-sidebar-link">Breadcrumbs</a>
+            <a href="components.html#pagination" class="pg-sidebar-link">Pagination</a>
+            <a href="components.html#modal" class="pg-sidebar-link">Modal</a>
+            <a href="components.html#dropdown" class="pg-sidebar-link">Dropdown</a>
+            <a href="components.html#table" class="pg-sidebar-link">Table</a>
+            <a href="components.html#accordion" class="pg-sidebar-link">Accordion</a>
+            <a href="components.html#tooltip-avatar" class="pg-sidebar-link">Tooltips &amp; Avatars</a>
+            <a href="components.html#search" class="pg-sidebar-link">Search</a>
+            <a href="components.html#qty-toggle" class="pg-sidebar-link">Quantity &amp; Toggle</a>
+            <a href="components.html#skeleton-empty" class="pg-sidebar-link">Skeleton &amp; Empty</a>
+            <a href="components.html#steps" class="pg-sidebar-link">Steps</a>
+            <a href="components.html#order-summary" class="pg-sidebar-link">Order Summary</a>
+            <a href="components.html#dividers" class="pg-sidebar-link">Dividers</a>
+          </div>
+          <div class="pg-sidebar-section">
+            <div class="pg-sidebar-section-label">Sections</div>
+            <a href="#section-hero" class="pg-sidebar-link">Hero</a>
+            <a href="#section-product-grid" class="pg-sidebar-link">Product Grid</a>
+            <a href="#section-features" class="pg-sidebar-link">Feature Strip</a>
+            <a href="#section-testimonial" class="pg-sidebar-link">Testimonial</a>
+            <a href="#section-cta" class="pg-sidebar-link">CTA Band</a>
+            <a href="#section-newsletter" class="pg-sidebar-link">Newsletter</a>
+            <a href="#section-trust" class="pg-sidebar-link">Trust Bar</a>
+          </div>
+          <div class="pg-sidebar-section">
+            <div class="pg-sidebar-section-label">Pages</div>
+            <a href="pages/homepage.html" target="_blank" class="pg-sidebar-link">Homepage</a>
+            <a href="pages/product-listing.html" target="_blank" class="pg-sidebar-link">Product Listing</a>
+            <a href="pages/product-detail.html" target="_blank" class="pg-sidebar-link">Product Detail</a>
+            <a href="pages/cart.html" target="_blank" class="pg-sidebar-link">Cart</a>
+            <a href="pages/checkout.html" target="_blank" class="pg-sidebar-link">Checkout</a>
+            <a href="pages/login.html" target="_blank" class="pg-sidebar-link">Login</a>
+            <a href="pages/order-confirmation.html" target="_blank" class="pg-sidebar-link">Order Confirmation</a>
+            <a href="pages/account.html" target="_blank" class="pg-sidebar-link">Account</a>
+          </div>
+        </nav>
+        <div class="pg-sidebar-footer">
+          <div class="text-xs" style="color: var(--color-neutral-400)">v2.0 — June 2026</div>
+        </div>
+      </aside>
+
+      <!-- ═══ MAIN CONTENT ═══ -->
+      <main class="pg-main">
+        <header class="pg-page-header">
+          <div class="pg-page-eyebrow">Reference</div>
+          <h1 class="pg-page-title">Section Patterns</h1>
+          <p class="pg-page-desc">
+            Composed, page-section-level storefront patterns built from the
+            core tokens and components — the closest preview of the actual
+            Shopify section templates. Defined in css/patterns.css.
+          </p>
+        </header>
+        <!-- ── SECTION: HERO ── -->
+        <section class="pg-section" id="section-hero">
+          <div class="pg-section-header">
+            <div>
+              <div class="pg-section-eyebrow">Section</div>
+              <div class="pg-section-title">Hero</div>
+              <div class="pg-section-desc">
+                Full-width hero section with dark background and brand CTA.
+              </div>
+            </div>
+          </div>
+          <div class="pg-scene">
+            <div class="pg-scene-label">
+              <span class="pg-scene-dot"></span> Hero Demo
+            </div>
+            <header class="hero">
+              <div class="hero-inner">
+                <p class="hero-eyebrow">Professional-Grade Supplements</p>
+                <h1 class="hero-title">Precision Nutrition for Optimal Health</h1>
+                <p class="hero-subtitle">
+                  Evidence-based formulations developed by practitioners, backed
+                  by science, trusted by patients.
+                </p>
+                <a href="#" class="btn btn--brand btn--lg">Shop All Products</a>
+              </div>
+            </header>
+          </div>
+        </section>
+
+        <!-- ── SECTION: PRODUCT GRID ── -->
+        <section class="pg-section" id="section-product-grid">
+          <div class="pg-section-header">
+            <div>
+              <div class="pg-section-eyebrow">Section</div>
+              <div class="pg-section-title">Product Grid</div>
+              <div class="pg-section-desc">
+                Filterable product grid with category chips.
+              </div>
+            </div>
+          </div>
+          <div class="pg-scene">
+            <div class="pg-scene-label">
+              <span class="pg-scene-dot"></span> Product Grid Demo
+            </div>
+            <div class="pg-scene-body">
+              <div class="flex gap-2 flex-wrap" style="margin-bottom: 20px">
+                <button class="chip is-active">All</button>
+                <button class="chip">Cognitive</button>
+                <button class="chip">Sleep</button>
+                <button class="chip">Gut Health</button>
+                <button class="chip">Immune</button>
+              </div>
+              <div class="grid grid-4">
+                <div class="card">
+                  <div class="card-image">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M16.5 9.4 7.55 4.24" />
+                      <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                      />
+                      <polyline points="3.29 7 12 12 20.71 7" />
+                      <line x1="12" x2="12" y1="22" y2="12" />
+                    </svg>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-brand">NeuroSolution</div>
+                    <div class="card-title">NeuroMag</div>
+                    <div class="card-tags">
+                      <span class="tag">Cognitive</span>
+                    </div>
+                    <div class="card-price">$54.00</div>
+                    <div class="card-actions">
+                      <button class="btn btn--primary btn--sm" style="flex: 1">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-image">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M16.5 9.4 7.55 4.24" />
+                      <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                      />
+                      <polyline points="3.29 7 12 12 20.71 7" />
+                      <line x1="12" x2="12" y1="22" y2="12" />
+                    </svg>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-brand">NeuroSolution</div>
+                    <div class="card-title">BC-ATP</div>
+                    <div class="card-tags">
+                      <span class="tag">Mitochondrial</span>
+                    </div>
+                    <div class="card-price">$62.00</div>
+                    <div class="card-actions">
+                      <button class="btn btn--primary btn--sm" style="flex: 1">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-image">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M16.5 9.4 7.55 4.24" />
+                      <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                      />
+                      <polyline points="3.29 7 12 12 20.71 7" />
+                      <line x1="12" x2="12" y1="22" y2="12" />
+                    </svg>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-brand">NeuroSolution</div>
+                    <div class="card-title">Omega-3 Pro</div>
+                    <div class="card-tags">
+                      <span class="tag">Vitamins</span>
+                    </div>
+                    <div class="card-price">$38.00</div>
+                    <div class="card-actions">
+                      <button class="btn btn--primary btn--sm" style="flex: 1">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-image">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M16.5 9.4 7.55 4.24" />
+                      <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                      />
+                      <polyline points="3.29 7 12 12 20.71 7" />
+                      <line x1="12" x2="12" y1="22" y2="12" />
+                    </svg>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-brand">NeuroSolution</div>
+                    <div class="card-title">Vitamin D3+K2</div>
+                    <div class="card-tags">
+                      <span class="tag">Vitamins</span>
+                    </div>
+                    <div class="card-price">$32.00</div>
+                    <div class="card-actions">
+                      <button class="btn btn--primary btn--sm" style="flex: 1">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION: FEATURES ── -->
+        <section class="pg-section" id="section-features">
+          <div class="pg-section-header">
+            <div>
+              <div class="pg-section-eyebrow">Section</div>
+              <div class="pg-section-title">Feature Strip</div>
+            </div>
+          </div>
+          <div class="pg-scene">
+            <div class="pg-scene-label">
+              <span class="pg-scene-dot"></span> Features Demo
+            </div>
+            <div class="pg-scene-body">
+              <div class="feature-grid">
+                <div>
+                  <div class="feature-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="feature-title">Third-Party Tested</div>
+                  <p class="text-sm feature-desc">
+                    Every batch verified for purity and potency.
+                  </p>
+                </div>
+                <div>
+                  <div class="feature-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"
+                      />
+                      <path d="M15 18H9" />
+                      <path
+                        d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"
+                      />
+                      <circle cx="17" cy="18" r="2" />
+                      <circle cx="7" cy="18" r="2" />
+                    </svg>
+                  </div>
+                  <div class="feature-title">Free Shipping</div>
+                  <p class="text-sm feature-desc">
+                    On orders over $75. Fast and reliable.
+                  </p>
+                </div>
+                <div>
+                  <div class="feature-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" />
+                    </svg>
+                  </div>
+                  <div class="feature-title">Practitioner Approved</div>
+                  <p class="text-sm feature-desc">
+                    Selected by licensed healthcare providers.
+                  </p>
+                </div>
+                <div>
+                  <div class="feature-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <path d="m9 11 3 3L22 4" />
+                    </svg>
+                  </div>
+                  <div class="feature-title">Quality Guaranteed</div>
+                  <p class="text-sm feature-desc">
+                    30-day satisfaction guarantee on all products.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION: TESTIMONIAL ── -->
+        <section class="pg-section" id="section-testimonial">
+          <div class="pg-section-header">
+            <div>
+              <div class="pg-section-eyebrow">Section</div>
+              <div class="pg-section-title">Testimonial</div>
+            </div>
+          </div>
+          <div class="pg-scene">
+            <div class="pg-scene-label">
+              <span class="pg-scene-dot"></span> Testimonial Demo
+            </div>
+            <div class="pg-scene-body">
+              <div class="testimonial">
+                <div class="testimonial-stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                </div>
+                <p class="testimonial-quote">
+                  "NeuroMag has been a game-changer for my patients with cognitive
+                  concerns. The bioavailability of this form of magnesium is
+                  unmatched."
+                </p>
+                <div class="testimonial-author">
+                  <div class="avatar">SM</div>
+                  <div class="testimonial-author-info">
+                    <div class="testimonial-author-name">Dr. Sarah Mitchell</div>
+                    <div class="testimonial-author-role">
+                      Integrative Medicine, Austin TX
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION: CTA BAND ── -->
+        <section class="pg-section" id="section-cta">
+          <div class="pg-section-header">
+            <div>
+              <div class="pg-section-eyebrow">Section</div>
+              <div class="pg-section-title">CTA Band</div>
+            </div>
+          </div>
+          <div class="pg-scene">
+            <div class="pg-scene-label">
+              <span class="pg-scene-dot"></span> CTA Demo
+            </div>
+            <div class="cta-band">
+              <p class="cta-eyebrow">For Healthcare Providers</p>
+              <h2 class="cta-title">Access Wholesale Pricing</h2>
+              <p class="cta-desc">
+                Verified practitioners receive exclusive pricing on our full
+                product line.
+              </p>
+              <a href="#" class="btn btn--brand btn--lg">Apply for Access</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION: NEWSLETTER ── -->
+        <section class="pg-section" id="section-newsletter">
+          <div class="pg-section-header">
+            <div>
+              <div class="pg-section-eyebrow">Section</div>
+              <div class="pg-section-title">Newsletter</div>
+            </div>
+          </div>
+          <div class="pg-scene">
+            <div class="pg-scene-label">
+              <span class="pg-scene-dot"></span> Newsletter Demo
+            </div>
+            <div class="newsletter-band">
+              <h4>Stay Informed</h4>
+              <p class="text-sm newsletter-desc">
+                Get the latest on new products, clinical research, and
+                practitioner resources.
+              </p>
+              <form class="newsletter-form">
+                <input type="email" class="input" placeholder="Enter your email" />
+                <button class="btn btn--primary btn--md" type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION: TRUST BAR ── -->
+        <section class="pg-section" id="section-trust">
+          <div class="pg-section-header">
+            <div>
+              <div class="pg-section-eyebrow">Section</div>
+              <div class="pg-section-title">Trust Bar</div>
+            </div>
+          </div>
+          <div class="pg-scene">
+            <div class="pg-scene-label">
+              <span class="pg-scene-dot"></span> Trust Bar Demo
+            </div>
+            <div class="pg-scene-body">
+              <div class="trust-bar">
+                <div class="trust-item">
+                  <svg
+                    class="trust-item-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                    />
+                  </svg>
+                  <div>
+                    <div class="trust-item-title">GMP Certified</div>
+                    <div class="trust-item-desc">Manufacturing standards</div>
+                  </div>
+                </div>
+                <div class="trust-item">
+                  <svg
+                    class="trust-item-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <path d="m9 11 3 3L22 4" />
+                  </svg>
+                  <div>
+                    <div class="trust-item-title">Third-Party Tested</div>
+                    <div class="trust-item-desc">Independent verification</div>
+                  </div>
+                </div>
+                <div class="trust-item">
+                  <svg
+                    class="trust-item-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"
+                    />
+                    <path d="M15 18H9" />
+                    <path
+                      d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"
+                    />
+                    <circle cx="17" cy="18" r="2" />
+                    <circle cx="7" cy="18" r="2" />
+                  </svg>
+                  <div>
+                    <div class="trust-item-title">Free Shipping $75+</div>
+                    <div class="trust-item-desc">Continental US</div>
+                  </div>
+                </div>
+                <div class="trust-item">
+                  <svg
+                    class="trust-item-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                  <div>
+                    <div class="trust-item-title">Secure Checkout</div>
+                    <div class="trust-item-desc">256-bit SSL encryption</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- ═══ JAVASCRIPT ═══ -->
+    <script>
+      // Sidebar scroll highlighting (same-page sections only)
+      const sections = document.querySelectorAll('main [id]');
+      const links = document.querySelectorAll('.pg-sidebar-link[href^="#"]');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              links.forEach((link) => {
+                link.classList.toggle(
+                  'is-active',
+                  link.getAttribute('href') === '#' + entry.target.id,
+                );
+              });
+            }
+          });
+        },
+        { rootMargin: '-20% 0px -80% 0px' },
+      );
+      sections.forEach((s) => {
+        if (s.id) observer.observe(s);
+      });
+
+      // Smooth scroll
+      document
+        .querySelectorAll('.pg-sidebar-link[href^="#"]')
+        .forEach((link) => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+    </script>
+  </body>
+</html>
